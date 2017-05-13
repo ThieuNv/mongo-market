@@ -1,6 +1,11 @@
 https://github.com/AngularClass/awesome-angular#material-design
 https://sherweb.github.io/ng2-materialize/checkbox
 
+https://themeforest.net/item/materialize-material-design-admin-template/11446068?ref=pixinvent
+https://themes.materializecss.com/pages/demo
+
+
+
 ========================= Tut =================
 
 Component	ng g component my-new-component
