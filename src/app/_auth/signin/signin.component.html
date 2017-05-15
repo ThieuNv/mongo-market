@@ -1,51 +1,56 @@
-<section class="col l6 offset-l3 s12row">
-  <div class="card">
-    <div class="card-content">
-      <div class="row">
-        <p class="center">Điền thông tin để đăng nhập</p>
-
-        <form [formGroup]="myForm" (ngSubmit)="onSubmit()" class="col s12">
-          <div class="row">
-            <div class="input-field col s12">
-              <i class="material-icons prefix">email</i>
-              <input id="email"
-                     type="email"
-                     formControlName="email"
-                     class="validate"/>
-              <label for="email">Email</label>
-            </div>
-
-            <div class="input-field col s12">
-              <i class="material-icons prefix">lock</i>
-              <input id="password"
-                     type="password"
-                     formControlName="password"
-                     class="validate"/>
-              <label for="password">Password</label>
-            </div>
+<div class="container">
+  <div class="row">
+    <section class="col l6 offset-l3 s12">
+      <div class="card">
+        <div class="card-content">
+          <div class="indigo padding_16">
+            <a [routerLink]="['../']" class="white-text">Back to Website</a>
           </div>
 
-          <div class="row">
-            <div class="col s12 center">
-              <button class="btn blue lighten-2">
-                Đăng nhập<i class="material-icons right">send</i>
-              </button>
-            </div>
+          <div class="padding_24">
+            <h4 class="center">Điền thông tin để đăng nhập</h4>
+            <form [formGroup]="myForm" (ngSubmit)="onSubmit()" class="col s12">
+              <div class="row">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">email</i>
+                  <input id="email"
+                         type="email"
+                         formControlName="email"
+                         class="validate"/>
+                  <label for="email">Email</label>
+                </div>
+
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">lock</i>
+                  <input id="password"
+                         type="password"
+                         formControlName="password"
+                         class="validate"/>
+                  <label for="password">Password</label>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col s12 center">
+                  <button class="btn blue lighten-2">
+                    Đăng nhập<i class="material-icons right">send</i>
+                  </button>
+                </div>
+              </div>
+
+
+              <div class="row">
+                <div class="col s6 m6">
+                  <a [routerLink]="['../signup']">Đăng ký</a>
+                </div>
+                <div class="col s6 m6">
+                  <a [routerLink]="['../forget-password']" class="right">Quên mật khẩu</a>
+                </div>
+              </div>
+            </form>
           </div>
-
-
-          <div class="row">
-            <div class="col s6 m6">
-              <a [routerLink]="['../signup']">Đăng ký</a>
-            </div>
-            <div class="col s6 m6">
-              <a [routerLink]="['../forget-password']" class="right">Quên mật khẩu</a>
-            </div>
-          </div>
-        </form>
-
+        </div>
       </div>
-
-    </div>
+    </section>
   </div>
-</section>
+</div>
