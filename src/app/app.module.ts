@@ -1,40 +1,65 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import {RouterModule} from '@angular/router';
 
 import { MaterializeModule } from 'angular2-materialize';
-
+import {routing} from './app.routing';
 
 import { AppComponent } from './app.component';
 import { MessagesComponent } from './messages/messages.component';
 import {MessagesService} from './messages/messages.service';
 
+import { FooterComponent } from './_shared/footer/footer.component';
+import { BreadcrumbComponent } from './_shared/breadcrumb/breadcrumb.component';
 
-// Define the routes
-const ROUTES = [
-  {
-    path: '', redirectTo: 'messages', pathMatch: 'full',
-  },
-  {
-    path: 'messages', component: MessagesComponent
-  }
-];
+import {AuthService} from './_auth/auth.service';
+import {UserService} from './_auth/user.service';
+import { SigninComponent } from './_auth/signin/signin.component';
+import { SignupComponent } from './_auth/signup/signup.component';
+
+
+import {ManagerComponent} from './_manager/manager.component';
+import {NavigationComponent} from './_manager/_shared/navigation/navigation.component';
+
+
+import {WebModule} from './_web/web.module';
+import { WebComponent } from './_web/web.component';
+import { SidenavComponent } from './_web/_shared/sidenav/sidenav.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    MessagesComponent
+    MessagesComponent,
+
+
+    SigninComponent,
+    SignupComponent,
+
+
+    FooterComponent,
+    BreadcrumbComponent,
+
+
+    WebComponent,
+    SidenavComponent,
+
+
+    ManagerComponent,
+    NavigationComponent,
+
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpModule,
     MaterializeModule,
-    RouterModule.forRoot(ROUTES) // Add routes to the app
+    routing,
+    WebModule
   ],
-  providers: [ MessagesService ],
+  providers: [ MessagesService, AuthService, UserService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

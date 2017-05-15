@@ -9,12 +9,11 @@
       </a>
 
       <ul class="right hide-on-med-and-down padding_right">
+        <li><a routerLink="/categories">Categories</a></li>
         <li><a routerLink="/messages">Messages</a></li>
-        <li><div (click)="getUserData()">Admin</div></li>
-
-        <li><a routerLink="categories">Categories</a></li>
-        <li><a routerLink="detail-product">Detail Product</a></li>
-        <li><a routerLink="cart">Cart</a></li>
+        <li><a routerLink="/detail-product">Detail Product</a></li>
+        <li><a routerLink="/">Detail Product</a><div (click)="getUserData()">Admin</div></li>
+        <li><a routerLink="/cart">Cart</a></li>
         <li>
           <a class='dropdown-button' href='#' data-activates='dropdown1'><i class="material-icons left">person_pin</i>Account Fucking</a>
           <!-- Dropdown Structure -->

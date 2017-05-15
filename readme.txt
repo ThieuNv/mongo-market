@@ -6,6 +6,11 @@ https://themes.materializecss.com/pages/demo
 
 
 
+http://demo.geekslabs.com/materialize/v2.3/layout03/eCommerce-invoice.html
+http://materialdesignblog.com/10-material-design-cards-for-web-in-css-html/
+
+
+
 ========================= Tut =================
 
 Component	ng g component my-new-component
@@ -18,6 +23,10 @@ Interface	ng g interface my-new-interface
 Enum	    ng g enum my-new-enum
 Module	  ng g module my-module
 
+
+ng g c template --flat (ko tao folder)
+ng g c template --inline-style  / ng g c template -is
+ng g c template --inline-template / ng g c template -it
 
 
 ============================ Cài đặt Angular-Cli mới nhất ===========================
@@ -67,11 +76,11 @@ Edit the angular-cli.json : Chỗ
   ]
 
 
-Add to the top of app.module.ts
+Add to the top of web.module.ts
   import { MaterializeModule } from 'angular2-materialize';
 
 
-Add MaterializeModule trong (app.module.ts):
+Add MaterializeModule trong (web.module.ts):
  imports: [
     MaterializeModule,
     ...
@@ -307,7 +316,7 @@ message.js :
   ng g c messages
 
 
-Add to app.module.ts (App line of import )
+Add to web.module.ts (App line of import )
 
   // Define the routes
   const ROUTES = [
