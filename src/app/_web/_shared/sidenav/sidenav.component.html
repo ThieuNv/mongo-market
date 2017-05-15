@@ -1,0 +1,64 @@
+<div class="navbar fixed">
+  <nav class="indigo">
+    <div class="nav-wrapper">
+
+      <a href="/" class="brand-logo padding_left">{{title}}</a>
+      <a href="#" data-activates="nav-mobile" class="button-collapse right" materialize="sideNav"
+         [materializeParams]="[{menuWidth: 300,edge: 'left', closeOnClick: true, draggable: true}]"><i
+        class="material-icons">menu</i>
+      </a>
+
+      <ul class="right hide-on-med-and-down padding_right">
+        <li><a routerLink="/categories">Categories</a></li>
+        <li><a routerLink="/messages">Messages</a></li>
+        <li><a routerLink="/detail-product">Detail Product</a></li>
+        <li><a routerLink="/">Detail Product</a><div (click)="getUserData()">Admin</div></li>
+        <li><a routerLink="/cart">Cart</a></li>
+        <li>
+          <a class='dropdown-button' href='#' data-activates='dropdown1'><i class="material-icons left">person_pin</i>Account Fucking</a>
+          <!-- Dropdown Structure -->
+          <ul id='dropdown1' class='dropdown-content' style="width: 160px">
+            <li *ngIf="!isLoggedIn()"><a routerLink="/signin">Sign In</a></li>
+            <li *ngIf="isLoggedIn()"><a routerLink="/profile">Profile</a></li>
+            <li *ngIf="isLoggedIn()" class="divider"></li>
+            <li><a routerLink="/signup">Sign Up</a></li>
+            <li *ngIf="isLoggedIn()" class="divider"></li>
+            <li *ngIf="isLoggedIn()"><a routerLink="/signin" (click)="onLogout()"><i class="tiny material-icons">input</i>Logout</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav indigo lighten-5">
+        <li>
+          <div class="userView">
+            <div class="background">
+              <img src="assets/img/sidenav/office.jpg">
+            </div>
+            <a href="#!user"><img class="circle" src="assets/img/sidenav/yuna.jpg"></a>
+            <a href="#!name"><span class="white-text name">John Doe</span></a>
+            <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+          </div>
+        </li>
+        <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+        <li><a href="#!">Second Link</a></li>
+        <li>
+          <div class="divider"></div>
+        </li>
+        <li><a class="subheader">Subheader</a></li>
+        <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+      </ul>
+
+    </div>
+  </nav>
+</div>
+
+
+<div class="my_breadcrumb padding_8">
+  <div class="col s12">
+    <a href="#!">First</a>
+    <span><i class="tiny material-icons">play_arrow</i></span>
+    <a href="#!">Second</a>
+    <span><i class="tiny material-icons">play_arrow</i></span>
+    <a href="#!">Third</a>
+  </div>
+</div>

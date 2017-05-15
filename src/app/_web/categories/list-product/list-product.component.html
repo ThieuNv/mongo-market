@@ -1,0 +1,44 @@
+<div class="row header-produktliste">
+  <div class="col m5 s12 modelsearch">
+
+    <div class="input-field col s12">
+      <input type="text" name="term" id="robot" placeholder="search" value="" class="ui-autocomplete-input"
+             autocomplete="off">
+      <label for="search" class=""><i class="fa fa-search"></i></label>
+      <!--<input type="submit" class="col s3 btn" name="submitautocomplete" value="Suchen" type="button" >-->
+    </div>
+
+  </div>
+
+  <div class="col m4 offset-m3 s12">
+    <div class="input-field col s12">
+      <select id="selectVoice">
+        <option value="" disabled selected>Choose your option</option>
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+      </select>
+      <label for="selectVoice">Materialize Select</label>
+    </div>
+  </div>
+
+
+
+
+</div>
+
+<ul class="row produktliste">
+  <li data-url-follow="/roboter/saugroboter/irobot-roomba-780/" class="col s12 m6 l4" *ngFor="let i of listProduct">
+    <app-single-product></app-single-product>
+  </li>
+</ul>
+
+<div class="col-md-12">
+  <nav>
+    <ul class="pagination right padding_right">
+      <li class="active"><a>1</a></li>
+      <li><a href="/suche/searchAll/24">2</a></li>
+      <li><a href="/suche/searchAll/24">&gt;</a></li>
+    </ul>
+  </nav>
+</div>

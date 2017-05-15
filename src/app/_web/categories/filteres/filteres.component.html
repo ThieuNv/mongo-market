@@ -1,0 +1,86 @@
+<ul class="my_filteres">
+  <li>
+    <a href="#" class="btn waves-effect waves-light blue">
+      Phu kien Sam Sung
+    </a>
+  </li>
+  <li>
+    <a href="#" class="btn waves-effect waves-light orange">
+      Phu kien Sony
+    </a>
+  </li>
+  <li>
+    <a href="#" class="btn waves-effect waves-light green">
+      Phu kien Iphone
+    </a>
+  </li>
+</ul>
+
+<div class="filter-container">
+  <strong class="big-font">Filtern nach</strong>
+
+  <ul class="collapsible" data-collapsible="expandable">
+
+    <li>
+      <div class="collapsible-header"><i class="fa fa-eur"></i>Price</div>
+      <div class="collapsible-body">
+        <div class="input-field col l12 m12">
+          <input class="validate valid" type="text" name="minp" id="minp" value="">
+          <label for="minp" class="active">ab</label>
+        </div>
+        <div class="input-field col l12 m12">
+          <input class="validate valid" type="text" name="maxp" id="maxp" value="">
+          <label for="maxp" class="active">bis EUR</label>
+        </div>
+        <div class="input-field col l12 m12 small-btn-container">
+          <input type="submit" class="btn green small-btn" value="Los">
+        </div>
+
+      </div>
+    </li>
+
+    <li>
+      <div class="collapsible-header"><i class="fa fa-paw"></i>Color</div>
+      <div class="collapsible-body">
+        <ul>
+          <li>
+            <input type="checkbox" name="allergic" id="allergic" value="1" checked="\&quot;checked\&quot;">
+            <label for="allergic">Black (2163)</label>
+          </li>
+          <li>
+            <input type="checkbox" name="pet" id="pet" value="1">
+            <label for="pet">White (1633)</label>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li>
+
+      <div class="collapsible-header"><i class="fa fa-barcode"></i>Manufacturer</div>
+      <div class="collapsible-body">
+        <ul>
+          <li>
+            <input type="checkbox" name="manufacturer[]" id="Samsung" value="16">
+            <label for="Samsung">Samsung (11)</label>
+          </li>
+
+          <li>
+            <input  type="checkbox" name="manufacturer[]" id="Sichler" value="3">
+            <label for="Sichler">Iphone (5)</label>
+          </li>
+
+          <li>
+            <input  type="checkbox" name="manufacturer[]" id="Vileda" value="12">
+            <label for="Vileda">Sony (0)</label>
+          </li>
+
+          <li>
+            <input type="checkbox" name="manufacturer[]" id="Vorwerk" value="6">
+            <label for="Vorwerk">Viettel (1)</label>
+          </li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+
+</div>

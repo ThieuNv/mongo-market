@@ -1,0 +1,12 @@
+section {
+  background-color: rgba(243, 242, 242, 0.64);
+}
+
+.cart_image_wrapper {
+  max-width: 128px;
+  max-height: 128px;
+}
+
+.cart_quatity_wrapper > input {
+  width: 50%;
+}

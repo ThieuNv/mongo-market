@@ -1,0 +1,12 @@
+.box_review_wrapper {
+  overflow: auto;
+  padding-bottom: 16px;
+  border-bottom: 1px solid gray;
+  margin-top: 32px;
+}
+
+.title_red {
+  width: 20%;
+  border-bottom: 2px solid gray;
+  margin-bottom: 8px;
+}

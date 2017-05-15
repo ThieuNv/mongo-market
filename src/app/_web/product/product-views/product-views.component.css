@@ -1,0 +1,11 @@
+ul li {
+  border: 1px solid gray;
+  margin-top:10px;
+  text-align: center;
+  padding: 5px;
+}
+
+ul li img {
+  width: 80%;
+}
+

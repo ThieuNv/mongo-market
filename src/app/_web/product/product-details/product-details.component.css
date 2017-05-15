@@ -1,0 +1,10 @@
+ul > li {
+  list-style-type: disc;
+}
+.my_ul > li {
+  border: 1px solid green;
+}
+
+.product_detail_wrapper {
+  border: 1px solid gray;
+}

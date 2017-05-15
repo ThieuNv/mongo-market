@@ -1,0 +1,15 @@
+.card-content {
+  background-color: rgba(205, 205, 205, 0.33);
+  padding: 16px;
+}
+
+.card-action {
+  text-align: center;
+  background-color: rgba(205, 205, 205, 0.33);
+  padding: 8px 24px;
+}
+.my_card_image {
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+}
