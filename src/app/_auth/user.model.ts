@@ -1,3 +1,5 @@
-/**
- * Created by thieunv on 15/05/2017.
- */
+export class User {
+  constructor(public email: string, public password: string,
+              public fullName?: string, public birthday?: Date
+  ) { }
+}

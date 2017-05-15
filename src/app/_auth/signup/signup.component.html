@@ -1,0 +1,70 @@
+<section class="col l6 offset-l3 s12">
+  <div class="card">
+    <div class="card-content">
+      <div class="row">
+        <p class="center">Hãy điền thông tin dưới đây để đăng kí</p>
+
+        <form [formGroup]="myForm" (ngSubmit)="onSubmit()" class="col s12">
+          <div class="row">
+
+            <div class="input-field col s12">
+              <i class="material-icons prefix">account_circle</i>
+              <input id="fullName"
+                     type="text"
+                     class="validate"
+                     formControlName="fullName"/>
+              <label for="fullName">FullName</label>
+            </div>
+
+            <div class="input-field col s12">
+              <i class="material-icons prefix">email</i>
+              <input id="email"
+                     type="email"
+                     class="validate"
+                     formControlName="email"/>
+              <label for="email">Email</label>
+            </div>
+
+            <div class="input-field col s12">
+              <i class="material-icons prefix">lock</i>
+              <input id="password"
+                     type="password"
+                     formControlName="password"
+                     class="validate"/>
+              <label for="password">Password</label>
+            </div>
+
+            <div class="input-field col s12">
+              <i class="material-icons prefix">today</i>
+              <span style="margin-left:45px;color: #928e8e;">Birthday</span>
+              <input id="birthday"
+                     type="date"
+                     formControlName="birthday"
+                     class="validate"/>
+            </div>
+
+            <div class="row">
+              <div class="col s12 center">
+                <button class="btn blue lighten-2">
+                  Đăng kí<i class="material-icons right">send</i>
+                </button>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col m6">
+                <a [routerLink]="['../signin']">Đăng nhập</a>
+              </div>
+              <div class="col m6">
+                <a [routerLink]="['../forget-password']" class="right">Quên mật khẩu</a>
+              </div>
+            </div>
+
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
