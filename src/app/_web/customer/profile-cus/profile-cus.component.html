@@ -1,0 +1,489 @@
+<div id="profile-page-wall" class="col s12 m9">
+
+  <div class="card-image">
+    <div>Thông tin cá nhân</div>
+    <a class="btn-floating halfway-fab waves-effect waves-light blue"><i class="material-icons">add</i></a>
+  </div>
+
+  <div class="card">
+    <div class="card-content">
+      <div class="row padding_left">
+
+        <form action="/customer/account/edit/" method="post" novalidate="novalidate">
+
+          <div class="input-group">
+            <div class="col s5 m4 l2">
+              <span class="right">Địa chỉ email: </span>
+            </div>
+
+            <div class="col s7 m8 l10">
+              <div>
+                nguyenhung22011995@gmail.com
+              </div>
+            </div>
+          </div>
+
+          <br>
+
+          <div class="input-group">
+            <div class="col s5 m4 l2">
+              <span class="right padding_top_16">Full Name: </span>
+            </div>
+
+            <div class="col s7 m8 l10">
+              <div class="col l5">
+                <input class="input-field" type="text" maxlength="50" value="nguyen hung 2">
+              </div>
+            </div>
+          </div>
+
+          <br>
+
+          <div class="input-group">
+            <div class="col s5 m4 l2">
+              <span class="right ">Gender: </span>
+            </div>
+
+            <div class="col s7 m8 l10">
+              <div class="col l5">
+                <input id="nam" class="input-field" value="male" type="radio">
+                <label class="" for="nam">Nam</label>
+
+                <input class="input-field" id="nu" value="female" checked="checked"
+                  type="radio">
+                <label class="css-my-account-form__radio-label"for="nu">Nữ</label>
+              </div>
+            </div>
+          </div>
+
+          <br>
+
+          <div class="input-group">
+            <div class="col s5 m4 l2">
+              <span class="right ">Birthday: </span>
+            </div>
+
+            <div class="col s7 m8 l10">
+              <div class="col l5">
+                <input id="date" class="input-field" value="male" type="date">
+                <label class="" for="date">Birthday</label>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="css-my-account-form__row">
+            <div class="css-my-account-form__left">
+              <label class="css-my-account-form__label css-my-account-form__label_line-height_22px"
+                     for="EditForm_interest">Sở thích</label></div>
+            <div class="css-my-account-form__right">
+              <div class="css-my-account-form__checkbox-list">
+                <ul class="css-my-account-form__checkbox-list-ul">
+                  <li class="css-my-account-form__checkbox-item">
+                    <input id="interest_1" class="css-my-account-form__checkbox-input" type="checkbox"
+                           name="EditForm[interest][1]" value="1" checked="checked">
+                    <label class="css-my-account-form__checkbox-label" for="interest_1">
+                      Điện thoại &amp; Máy tính bảng </label>
+                  </li>
+                  <li class="css-my-account-form__checkbox-item">
+                    <input id="interest_2" class="css-my-account-form__checkbox-input" type="checkbox"
+                           name="EditForm[interest][2]" value="1" checked="checked">
+                    <label class="css-my-account-form__checkbox-label" for="interest_2">
+                      Máy vi tính &amp; Laptop </label>
+                  </li>
+                  <li class="css-my-account-form__checkbox-item">
+                    <input id="interest_3" class="css-my-account-form__checkbox-input" type="checkbox"
+                           name="EditForm[interest][3]" value="1" checked="checked">
+                    <label class="css-my-account-form__checkbox-label" for="interest_3">
+                      Máy ảnh &amp; Máy quay phim </label>
+                  </li>
+                  <li class="css-my-account-form__checkbox-item">
+                    <input id="interest_4" class="css-my-account-form__checkbox-input" type="checkbox"
+                           name="EditForm[interest][4]" value="1" checked="checked">
+                    <label class="css-my-account-form__checkbox-label" for="interest_4">
+                      TV, Video &amp; Âm thanh </label>
+                  </li>
+                  <li class="css-my-account-form__checkbox-item">
+                    <input id="interest_5" class="css-my-account-form__checkbox-input" type="checkbox"
+                           name="EditForm[interest][5]" value="1">
+                    <label class="css-my-account-form__checkbox-label" for="interest_5">
+                      Đồ gia dụng </label>
+                  </li>
+                  <li class="css-my-account-form__checkbox-item">
+                    <input id="interest_6" class="css-my-account-form__checkbox-input" type="checkbox"
+                           name="EditForm[interest][6]" value="1">
+                    <label class="css-my-account-form__checkbox-label" for="interest_6">
+                      Nhà cửa &amp; Đời sống </label>
+                  </li>
+                  <li class="css-my-account-form__checkbox-item">
+                    <input id="interest_7" class="css-my-account-form__checkbox-input" type="checkbox"
+                           name="EditForm[interest][7]" value="1">
+                    <label class="css-my-account-form__checkbox-label" for="interest_7">
+                      Trẻ sơ sinh, Trẻ em &amp; Đồ chơi </label>
+                  </li>
+                  <li class="css-my-account-form__checkbox-item">
+                    <input id="interest_8" class="css-my-account-form__checkbox-input" type="checkbox"
+                           name="EditForm[interest][8]" value="1" checked="checked">
+                    <label class="css-my-account-form__checkbox-label" for="interest_8">
+                      Chăm sóc sắc đẹp &amp; sức khỏe </label>
+                  </li>
+                  <li class="css-my-account-form__checkbox-item">
+                    <input id="interest_9" class="css-my-account-form__checkbox-input" type="checkbox"
+                           name="EditForm[interest][9]" value="1">
+                    <label class="css-my-account-form__checkbox-label" for="interest_9">
+                      Thời trang &amp; Du lịch </label>
+                  </li>
+                  <li class="css-my-account-form__checkbox-item">
+                    <input id="interest_10" class="css-my-account-form__checkbox-input" type="checkbox"
+                           name="EditForm[interest][10]" value="1" checked="checked">
+                    <label class="css-my-account-form__checkbox-label" for="interest_10">
+                      Phụ kiện thời trang </label>
+                  </li>
+                  <li class="css-my-account-form__checkbox-item">
+                    <input id="interest_11" class="css-my-account-form__checkbox-input" type="checkbox"
+                           name="EditForm[interest][11]" value="1" checked="checked">
+                    <label class="css-my-account-form__checkbox-label" for="interest_11">
+                      Thể thao </label>
+                  </li>
+                  <li class="css-my-account-form__checkbox-item">
+                    <input id="interest_12" class="css-my-account-form__checkbox-input" type="checkbox"
+                           name="EditForm[interest][12]" value="1" checked="checked">
+                    <label class="css-my-account-form__checkbox-label" for="interest_12">
+                      Ôtô, Xe máy &amp; Thiết bị định vị </label>
+                  </li>
+                  <li class="css-my-account-form__checkbox-item">
+                    <input id="interest_13" class="css-my-account-form__checkbox-input" type="checkbox"
+                           name="EditForm[interest][13]" value="1">
+                    <label class="css-my-account-form__checkbox-label" for="interest_13">
+                      Giải trí đa phương tiện </label>
+                  </li>
+                  <li class="css-my-account-form__checkbox-item">
+                    <input id="interest_14" class="css-my-account-form__checkbox-input" type="checkbox"
+                           name="EditForm[interest][14]" value="1">
+                    <label class="css-my-account-form__checkbox-label" for="interest_14">
+                      Phong cách sống </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="css-my-account-form__row css-my-account-form__row_content_button">
+            <button class="css-my-account-form__submit-button" type="submit" id="send">
+              Lưu
+            </button>
+          </div>
+
+          <div class="clearfix"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- profile-page-wall-share -->
+<div id="profile-page-wall-share" class="row">
+  <div class="col s12">
+    <ul class="tabs tab-profile z-depth-1 light-blue" style="width: 100%;">
+      <li class="tab col s3"><a class="white-text waves-effect waves-light active" href="#UpdateStatus"><i
+        class="mdi-editor-border-color"></i> Update Status</a>
+      </li>
+      <li class="tab col s3"><a class="white-text waves-effect waves-light" href="#AddPhotos"><i
+        class="mdi-image-camera-alt"></i> Add Photos</a>
+      </li>
+      <li class="tab col s3"><a class="white-text waves-effect waves-light" href="#CreateAlbum"><i
+        class="mdi-image-photo-album"></i> Create Album</a>
+      </li>
+      <div class="indicator" style="right: 628px; left: 0px;"></div>
+    </ul>
+    <!-- UpdateStatus-->
+    <div id="UpdateStatus" class="tab-content col s12  grey lighten-4">
+      <div class="row">
+        <div class="col s2">
+          <img src="images/avatar.jpg" alt="" class="circle responsive-img valign profile-image-post">
+        </div>
+        <div class="input-field col s10">
+          <textarea id="textarea" row="2" class="materialize-textarea"></textarea>
+          <label for="textarea" class="">What's on your mind?</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 m6 share-icons">
+          <a href="#"><i class="mdi-image-camera-alt"></i></a>
+          <a href="#"><i class="mdi-action-account-circle"></i></a>
+          <a href="#"><i class="mdi-hardware-keyboard-alt"></i></a>
+          <a href="#"><i class="mdi-communication-location-on"></i></a>
+        </div>
+        <div class="col s12 m6 right-align">
+          <!-- Dropdown Trigger -->
+          <a class="dropdown-button btn" href="#" data-activates="profliePost"><i class="mdi-action-language"></i>
+            Public</a>
+          <ul id="profliePost" class="dropdown-content">
+            <li><a href="#!"><i class="mdi-action-language"></i> Public</a></li>
+            <li><a href="#!"><i class="mdi-action-face-unlock"></i> Friends</a></li>
+            <li><a href="#!"><i class="mdi-action-lock-outline"></i> Only Me</a></li>
+          </ul>
+
+          <!-- Dropdown Structure -->
+
+
+          <a class="waves-effect waves-light btn"><i class="mdi-maps-rate-review left"></i>Post</a>
+        </div>
+      </div>
+    </div>
+    <!-- AddPhotos -->
+    <div id="AddPhotos" class="tab-content col s12  grey lighten-4" style="display: none;">
+      <div class="row">
+        <div class="col s2">
+          <img src="images/avatar.jpg" alt="" class="circle responsive-img valign profile-image-post">
+        </div>
+        <div class="input-field col s10">
+          <textarea id="textarea" row="2" class="materialize-textarea"></textarea>
+          <label for="textarea" class="">Share your favorites photos!</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 m6 share-icons">
+          <a href="#"><i class="mdi-image-camera-alt"></i></a>
+          <a href="#"><i class="mdi-action-account-circle"></i></a>
+          <a href="#"><i class="mdi-hardware-keyboard-alt"></i></a>
+          <a href="#"><i class="mdi-communication-location-on"></i></a>
+        </div>
+        <div class="col s12 m6 right-align">
+          <!-- Dropdown Trigger -->
+          <a class="dropdown-button btn" href="#" data-activates="profliePost2"><i class="mdi-action-language"></i>
+            Public</a>
+          <ul id="profliePost2" class="dropdown-content">
+            <li><a href="#!"><i class="mdi-action-language"></i> Public</a></li>
+            <li><a href="#!"><i class="mdi-action-face-unlock"></i> Friends</a></li>
+            <li><a href="#!"><i class="mdi-action-lock-outline"></i> Only Me</a></li>
+          </ul>
+
+          <!-- Dropdown Structure -->
+
+
+          <a class="waves-effect waves-light btn"><i class="mdi-maps-rate-review left"></i>Post</a>
+        </div>
+      </div>
+    </div>
+    <!-- CreateAlbum -->
+    <div id="CreateAlbum" class="tab-content col s12  grey lighten-4" style="display: none;">
+      <div class="row">
+        <div class="col s2">
+          <img src="images/avatar.jpg" alt="" class="circle responsive-img valign profile-image-post">
+        </div>
+        <div class="input-field col s10">
+          <textarea id="textarea" row="2" class="materialize-textarea"></textarea>
+          <label for="textarea" class="">Create awesome album.</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 m6 share-icons">
+          <a href="#"><i class="mdi-image-camera-alt"></i></a>
+          <a href="#"><i class="mdi-action-account-circle"></i></a>
+          <a href="#"><i class="mdi-hardware-keyboard-alt"></i></a>
+          <a href="#"><i class="mdi-communication-location-on"></i></a>
+        </div>
+        <div class="col s12 m6 right-align">
+          <!-- Dropdown Trigger -->
+          <a class="dropdown-button btn" href="#" data-activates="profliePost3"><i class="mdi-action-language"></i>
+            Public</a>
+          <ul id="profliePost3" class="dropdown-content">
+            <li><a href="#!"><i class="mdi-action-language"></i> Public</a></li>
+            <li><a href="#!"><i class="mdi-action-face-unlock"></i> Friends</a></li>
+            <li><a href="#!"><i class="mdi-action-lock-outline"></i> Only Me</a></li>
+          </ul>
+
+          <!-- Dropdown Structure -->
+
+
+          <a class="waves-effect waves-light btn"><i class="mdi-maps-rate-review left"></i>Post</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--/ profile-page-wall-share -->
+
+<!-- profile-page-wall-posts -->
+<div id="profile-page-wall-posts" class="row">
+  <div class="col s12">
+    <!-- medium -->
+    <div id="profile-page-wall-post" class="card">
+      <div class="card-profile-title">
+        <div class="row">
+          <div class="col s1">
+            <img src="images/avatar.jpg" alt="" class="circle responsive-img valign profile-post-uer-image">
+          </div>
+          <div class="col s10">
+            <p class="grey-text text-darken-4 margin">John Doe</p>
+            <span class="grey-text text-darken-1 ultra-small">Shared publicly  -  26 Jun 2015</span>
+          </div>
+          <div class="col s1 right-align">
+            <i class="mdi-navigation-expand-more"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12">
+            <p>I am a very simple wall post. I am good at containing <a href="#">#small</a> bits of <a href="#">#information</a>.
+              I require little more information to use effectively.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card-image profile-medium">
+        <img src="images/gallary/2.jpg" alt="sample" class="responsive-img profile-post-image profile-medium">
+        <span class="card-title">Card Title</span>
+      </div>
+      <div class="card-content">
+        <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require
+          little markup to use effectively.</p>
+      </div>
+      <div class="card-action row">
+        <div class="col s4 card-action-share">
+          <a href="#">Like</a>
+          <a href="#">Share</a>
+        </div>
+
+        <div class="input-field col s8 margin">
+          <input id="profile-comments" type="text" class="validate margin">
+          <label for="profile-comments" class="">Comments</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- medium video -->
+    <div id="profile-page-wall-post" class="card">
+      <div class="card-profile-title">
+        <div class="row">
+          <div class="col s1">
+            <img src="images/avatar.jpg" alt="" class="circle responsive-img valign profile-post-uer-image">
+          </div>
+          <div class="col s10">
+            <p class="grey-text text-darken-4 margin">John Doe</p>
+            <span class="grey-text text-darken-1 ultra-small">Shared publicly  -  26 Jun 2015</span>
+          </div>
+          <div class="col s1 right-align">
+            <i class="mdi-navigation-expand-more"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12">
+            <p>I am a very simple wall post. I am good at containing <a href="#">#small</a> bits of <a href="#">#information</a>.
+              I require little more information to use effectively.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card-image profile-medium">
+        <div class="video-container no-controls">
+          <iframe width="640" height="360" src="https://www.youtube.com/embed/10r9ozshGVE" frameborder="0"
+                  allowfullscreen=""></iframe>
+        </div>
+        <span class="card-title">Card Title</span>
+      </div>
+      <div class="card-content">
+        <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require
+          little markup to use effectively.</p>
+      </div>
+      <div class="card-action row">
+        <div class="col s4 card-action-share">
+          <a href="#">Like</a>
+          <a href="#">Share</a>
+        </div>
+
+        <div class="input-field col s8 margin">
+          <input id="profile-comments" type="text" class="validate margin">
+          <label for="profile-comments" class="">Comments</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- small -->
+    <div id="profile-page-wall-post" class="card">
+      <div class="card-profile-title">
+        <div class="row">
+          <div class="col s1">
+            <img src="images/avatar.jpg" alt="" class="circle responsive-img valign profile-post-uer-image">
+          </div>
+          <div class="col s10">
+            <p class="grey-text text-darken-4 margin">John Doe</p>
+            <span class="grey-text text-darken-1 ultra-small">Shared publicly  -  26 Jun 2015</span>
+          </div>
+          <div class="col s1 right-align">
+            <i class="mdi-navigation-expand-more"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12">
+            <p>I am a very simple wall post. I am good at containing <a href="#">#small</a> bits of <a href="#">#information</a>.
+              I require little more information to use effectively.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card-image profile-small">
+        <img src="images/gallary/1.jpg" alt="sample" class="responsive-img profile-post-image">
+        <span class="card-title">Card Title</span>
+      </div>
+      <div class="card-content">
+        <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require
+          little markup to use effectively.</p>
+      </div>
+      <div class="card-action row">
+        <div class="col s4 card-action-share">
+          <a href="#">Like</a>
+          <a href="#">Share</a>
+        </div>
+
+        <div class="input-field col s8 margin">
+          <input id="profile-comments" type="text" class="validate">
+          <label for="profile-comments" class="">Comments</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- small -->
+    <div id="profile-page-wall-post" class="card">
+      <div class="card-profile-title">
+        <div class="row">
+          <div class="col s1">
+            <img src="images/avatar.jpg" alt="" class="circle responsive-img valign profile-post-uer-image">
+          </div>
+          <div class="col s10">
+            <p class="grey-text text-darken-4 margin">John Doe</p>
+            <span class="grey-text text-darken-1 ultra-small">Shared publicly  -  26 Jun 2015</span>
+          </div>
+          <div class="col s1 right-align">
+            <i class="mdi-navigation-expand-more"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12">
+            <p>I am a very simple wall post. I am good at containing <a href="#">#small</a> bits of <a href="#">#information</a>.
+              I require little more information to use effectively.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card-image profile-large">
+        <img src="images/gallary/3.jpg" alt="sample" class="responsive-img profile-post-image">
+        <span class="card-title">Card Title</span>
+      </div>
+      <div class="card-content">
+        <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require
+          little markup to use effectively.</p>
+      </div>
+      <div class="card-action row">
+        <div class="col s4 card-action-share">
+          <a href="#">Like</a>
+          <a href="#">Share</a>
+        </div>
+
+        <div class="input-field col s8 margin">
+          <input id="profile-comments" type="text" class="validate">
+          <label for="profile-comments" class="">Comments</label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--/ profile-page-wall-posts -->
