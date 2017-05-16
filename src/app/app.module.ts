@@ -20,7 +20,10 @@ import { SignupComponent } from './_auth/signup/signup.component';
 
 
 import {ManagerComponent} from './_manager/manager.component';
-import {NavigationComponent} from './_manager/_shared/navigation/navigation.component';
+import {HeaderManComponent} from './_manager/_shared/header-man/header-man.component';
+import {SidenavLeftComponent} from './_manager/_shared/sidenav-left/sidenav-left.component';
+import {SidenavRightComponent} from './_manager/_shared/sidenav-right/sidenav-right.component';
+import {FooterManComponent} from './_manager/_shared/footer-man/footer-man.component';
 
 
 import {WebModule} from './_web/web.module';
@@ -31,6 +34,7 @@ import { SidenavComponent } from './_web/_shared/sidenav/sidenav.component';
 import {CustomerComponent} from './_web/customer/customer.component';
 import {SidenavCusComponent} from './_web/customer/sidenav-cus/sidenav-cus.component';
 import {HeaderCusComponent} from './_web/customer/header-cus/header-cus.component';
+
 
 
 @NgModule({
@@ -52,7 +56,10 @@ import {HeaderCusComponent} from './_web/customer/header-cus/header-cus.componen
 
 
     ManagerComponent,
-    NavigationComponent,
+    HeaderManComponent,
+    SidenavLeftComponent,
+    SidenavRightComponent,
+    FooterManComponent,
 
 
     CustomerComponent,

@@ -1,0 +1,19 @@
+
+footer {
+  padding-left: 240px
+}
+
+footer.page-footer {
+  padding-top: 0;
+  background-color: #00bcd4;
+}
+
+.page-footer .container {
+  padding: 0 15px
+}
+
+@media only screen and (max-width: 993px) {
+  footer {
+    padding-left: 0
+  }
+}

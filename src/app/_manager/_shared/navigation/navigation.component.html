@@ -1,64 +1,72 @@
-<div class="navbar fixed">
-  <nav class="indigo">
-    <div class="nav-wrapper">
+<header id="header" class="page-topbar">
+  <!-- start header nav-->
+  <div class="navbar-fixed">
+    <nav class="navbar-color">
+      <div class="nav-wrapper">
+        <ul class="left">
+          <li><h1 class="logo-wrapper"><a href="index.html" class="brand-logo darken-1"><img src="images/materialize-logo.png" alt="materialize logo"></a> <span class="logo-text">Materialize</span></h1></li>
+        </ul>
+        <div class="header-search-wrapper hide-on-med-and-down">
+          <i class="mdi-action-search"></i>
+          <input type="text" name="Search" class="header-search-input z-depth-2" placeholder="Explore Materialize">
+        </div>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="javascript:void(0);" class="waves-effect waves-block waves-light translation-button" data-activates="translation-dropdown"><img src="images/flag-icons/United-States.png" alt="USA"></a><ul id="translation-dropdown" class="dropdown-content" style="white-space: nowrap; position: absolute; top: 64px; left: 1066px; opacity: 1; display: none;">
+            <li>
+              <a href="#!"><img src="images/flag-icons/United-States.png" alt="English">  <span class="language-select">English</span></a>
+            </li>
+            <li>
+              <a href="#!"><img src="images/flag-icons/France.png" alt="French">  <span class="language-select">French</span></a>
+            </li>
+            <li>
+              <a href="#!"><img src="images/flag-icons/China.png" alt="Chinese">  <span class="language-select">Chinese</span></a>
+            </li>
+            <li>
+              <a href="#!"><img src="images/flag-icons/Germany.png" alt="German">  <span class="language-select">German</span></a>
+            </li>
 
-      <a href="/" class="brand-logo padding_left">{{title}}</a>
-      <a href="#" data-activates="nav-mobile" class="button-collapse right" materialize="sideNav"
-         [materializeParams]="[{menuWidth: 300,edge: 'left', closeOnClick: true, draggable: true}]"><i
-        class="material-icons">menu</i>
-      </a>
-
-      <ul class="right hide-on-med-and-down padding_right">
-        <li><a routerLink="/categories">Categories</a></li>
-        <li><a routerLink="/messages">Messages</a></li>
-        <li><a routerLink="/detail-product">Detail Product</a></li>
-        <li><a routerLink="/">Detail Product</a><div (click)="getUserData()">Admin</div></li>
-        <li><a routerLink="/cart">Cart</a></li>
-        <li>
-          <a class='dropdown-button' href='#' data-activates='dropdown1'><i class="material-icons left">person_pin</i>Account Fucking</a>
-          <!-- Dropdown Structure -->
-          <ul id='dropdown1' class='dropdown-content' style="width: 160px">
-            <li *ngIf="!isLoggedIn()"><a routerLink="/signin">Sign In</a></li>
-            <li *ngIf="isLoggedIn()"><a routerLink="/profile">Profile</a></li>
-            <li *ngIf="isLoggedIn()" class="divider"></li>
-            <li><a routerLink="/signup">Sign Up</a></li>
-            <li *ngIf="isLoggedIn()" class="divider"></li>
-            <li *ngIf="isLoggedIn()"><a routerLink="/signin" (click)="onLogout()"><i class="tiny material-icons">input</i>Logout</a></li>
           </ul>
-        </li>
-      </ul>
+          </li>
+          <li><a href="javascript:void(0);" class="waves-effect waves-block waves-light toggle-fullscreen"><i class="mdi-action-settings-overscan"></i></a>
+          </li>
+          <li><a href="javascript:void(0);" class="waves-effect waves-block waves-light notification-button" data-activates="notifications-dropdown"><i class="mdi-social-notifications"><small class="notification-badge">5</small></i>
 
-      <ul id="nav-mobile" class="side-nav indigo lighten-5">
-        <li>
-          <div class="userView">
-            <div class="background">
-              <img src="assets/img/sidenav/office.jpg">
-            </div>
-            <a href="#!user"><img class="circle" src="assets/img/sidenav/yuna.jpg"></a>
-            <a href="#!name"><span class="white-text name">John Doe</span></a>
-            <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
-          </div>
-        </li>
-        <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
-        <li><a href="#!">Second Link</a></li>
-        <li>
-          <div class="divider"></div>
-        </li>
-        <li><a class="subheader">Subheader</a></li>
-        <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
-      </ul>
+          </a><ul id="notifications-dropdown" class="dropdown-content" style="white-space: nowrap; position: absolute; top: 64px; left: 1014px; opacity: 1; display: none;">
+            <li>
+              <h5>NOTIFICATIONS <span class="new badge">5</span></h5>
+            </li>
+            <li class="divider"></li>
+            <li>
+              <a href="#!"><i class="mdi-action-add-shopping-cart"></i> A new order has been placed!</a>
+              <time class="media-meta" datetime="2015-06-12T20:50:48+08:00">2 hours ago</time>
+            </li>
+            <li>
+              <a href="#!"><i class="mdi-action-stars"></i> Completed the task</a>
+              <time class="media-meta" datetime="2015-06-12T20:50:48+08:00">3 days ago</time>
+            </li>
+            <li>
+              <a href="#!"><i class="mdi-action-settings"></i> Settings updated</a>
+              <time class="media-meta" datetime="2015-06-12T20:50:48+08:00">4 days ago</time>
+            </li>
+            <li>
+              <a href="#!"><i class="mdi-editor-insert-invitation"></i> Director meeting started</a>
+              <time class="media-meta" datetime="2015-06-12T20:50:48+08:00">6 days ago</time>
+            </li>
+            <li>
+              <a href="#!"><i class="mdi-action-trending-up"></i> Generate monthly report</a>
+              <time class="media-meta" datetime="2015-06-12T20:50:48+08:00">1 week ago</time>
+            </li>
+          </ul>
+          </li>
+          <li><a href="#" data-activates="chat-out" class="waves-effect waves-block waves-light chat-collapse"><i class="mdi-communication-chat"></i></a>
+          </li>
+        </ul>
+        <!-- translation-button -->
 
-    </div>
-  </nav>
-</div>
+        <!-- notifications-dropdown -->
 
-
-<div class="my_breadcrumb padding_8">
-  <div class="col s12">
-    <a href="#!">First</a>
-    <span><i class="tiny material-icons">play_arrow</i></span>
-    <a href="#!">Second</a>
-    <span><i class="tiny material-icons">play_arrow</i></span>
-    <a href="#!">Third</a>
+      </div>
+    </nav>
   </div>
-</div>
+  <!-- end header nav-->
+</header>

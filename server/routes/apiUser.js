@@ -57,15 +57,14 @@ router.post("/signin", function(req, res, next) {
         }
       });
     }
-    const token = jwt.sign({user:
-            {_id: user._id, fullName: user.fullName, targetAccount: user.targetAccount}},
-            'secret', {expiresIn : 7200});
+    const token = jwt.sign({user: {_id: user._id, targetAccount: user.targetAccount}}, 'secret', {expiresIn : 7200});
 
     res.status(200).json({
       message: "Successfully logged in",
       token: token,
       userId: user._id,
-      targetAccount: user.targetAccount
+      targetAccount: user.targetAccount,
+      fullName: user.fullName
     })
   });
 });

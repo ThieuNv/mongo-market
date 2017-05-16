@@ -11,6 +11,7 @@ import {stringify} from '@angular/core/src/util';
 export class SidenavComponent implements OnInit {
 
   title = 'Application';
+  fullName = '';
 
   constructor(private authService: AuthService, private userService: UserService) { }
 
@@ -23,6 +24,11 @@ export class SidenavComponent implements OnInit {
 
   isLoggedIn() {
     return this.authService.isLoggedIn();
+  }
+
+  getFullName() {
+    /*this.userService.getFullName()
+      .subscribe((fullName: String) => fullName = fullName);*/
   }
 
   getUserData() {

@@ -1,8 +1,31 @@
-<app-navigation></app-navigation>
-<app-breadcrumb></app-breadcrumb>
-<div class="container">
-  <div class="row">
-    <router-outlet></router-outlet>
+<!-- START HEADER -->
+<app-header-man></app-header-man>
+<!-- END HEADER -->
+
+<!-- //////////////////////////////////////////////////////////////////////////// -->
+<!-- START MAIN -->
+<div id="main">
+  <!-- START WRAPPER -->
+  <div class="wrapper">
+
+    <!-- START LEFT SIDEBAR NAV-->
+    <app-sidenav-left></app-sidenav-left>
+    <!-- END LEFT SIDEBAR NAV-->
+
+    <!-- START CONTENT -->
+    <section id="content">
+      <router-outlet></router-outlet>
+    </section>
+    <!-- END CONTENT -->
+
   </div>
+  <!-- END WRAPPER -->
+
 </div>
-<app-footer></app-footer>
+<!-- END MAIN -->
+
+<!-- //////////////////////////////////////////////////////////////////////////// -->
+
+<!-- START FOOTER -->
+<app-footer-man></app-footer-man>
+<!-- END FOOTER -->

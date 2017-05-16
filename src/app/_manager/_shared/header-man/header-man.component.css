@@ -1,0 +1,239 @@
+
+header .brand-logo {
+  margin: 1px 0;
+  padding: 14px 20px
+}
+
+header .brand-logo img {
+  width: 172px
+}
+
+.header-search-wrapper {
+  margin: 10px auto 0 240px;
+  width: calc(100% - 600px);
+  height: 40px;
+  display: inline-block;
+  position: relative
+}
+
+.header-search-wrapper i {
+  position: absolute;
+  font-size: 24px;
+  top: 6px;
+  left: 24px;
+  line-height: 32px !important;
+  -webkit-transition: color 200ms ease;
+  transition: color 200ms ease
+}
+
+input.header-search-input {
+  display: block;
+  padding: 8px 8px 8px 72px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  height: 24px;
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+  border: none;
+  font-size: 16px;
+  appearance: textfield;
+  font-weight: 400;
+  outline: none;
+  border-radius: 3px
+}
+
+input.header-search-input:hover {
+  background: rgba(255, 255, 255, 0.5)
+}
+
+input.header-search-input:focus {
+  color: #333;
+  background: #fff;
+  border-bottom: none !important;
+  box-shadow: none !important
+}
+
+.header-search-wrapper-focus i {
+  color: #444
+}
+
+.header-search-input::-webkit-input-placeholder {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400
+}
+
+.header-search-input::-moz-placeholder {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400
+}
+
+.header-search-input:-ms-input-placeholder {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400
+}
+
+.header-search-input:focus::-webkit-input-placeholder {
+  color: #333;
+  font-size: 16px;
+  font-weight: 400
+}
+
+.header-search-input:focus::-moz-placeholder {
+  color: #333;
+  font-size: 16px;
+  font-weight: 400
+}
+
+.header-search-input:focus::placeholder {
+  color: #333;
+  font-size: 16px;
+  font-weight: 400
+}
+
+.header-search-input:focus:-ms-input-placeholder {
+  color: #333;
+  font-size: 16px;
+  font-weight: 400
+}
+
+.header-search-input::placeholder {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400
+}
+
+.search-out {
+  display: none
+}
+
+.search-out input[type=text]:focus:not([readonly]) {
+  border-bottom: 1px solid #fff !important;
+  box-shadow: none
+}
+
+.search-out-text {
+  border-bottom: 1px solid #fff !important
+}
+
+.translation-button img {
+  position: relative;
+  top: 12px
+}
+
+#translation-dropdown .language-select {
+  position: relative;
+  top: -9px
+}
+
+
+.notification-badge {
+  position: relative;
+  right: -22px;
+  top: -76px;
+  color: #ffffff;
+  background-color: #FF4081;
+  margin: 0 -.8em;
+  border-radius: 70%;
+  padding: 4px 8px;
+}
+
+#notifications-dropdown h5 {
+  font-size: 1rem;
+  text-transform: capitalize;
+  font-weight: 500
+}
+
+#notifications-dropdown li {
+  padding: 10px;
+  font-size: 1rem
+}
+
+#notifications-dropdown li > a {
+  padding: 0;
+  font-size: 1rem;
+  font-weight: 300
+}
+
+#notifications-dropdown li > a > i {
+  display: inline-block;
+  font-size: 1.2rem;
+  position: relative;
+  top: 4px
+}
+
+#notifications-dropdown li > time {
+  font-size: 0.8rem;
+  font-weight: 400
+}
+
+#notifications-dropdown li.divider {
+  padding: 0
+}
+
+
+.small {
+  font-size: 1.0rem;
+  margin: 0;
+  padding: 0
+}
+
+
+
+li.li-hover:hover {
+  background: transparent !important
+}
+
+li.search-out:hover {
+  background: transparent
+}
+
+li.mobile:before {
+  background: #f7464a
+}
+
+li.kitchen:before {
+  background: #46bfbd
+}
+
+li.home:before {
+  background: #fdb45c
+}
+
+
+
+
+h1.logo-wrapper {
+  margin: 0;
+  font-size: 2em;
+}
+
+h1 span.logo-text {
+  display: none
+}
+
+
+@media only screen and (max-width: 992px) {
+  nav .nav-wrapper {
+    text-align: center
+  }
+
+  nav .nav-wrapper a.page-title {
+    font-size: 36px
+  }
+
+}
+
+nav ul li.no-hover:hover {
+  background: none
+}
+
+.my_nav_color {
+  background-color: #00bcd4;
+}
+
+a.notification-button {
+  height: 65px !important;
+}

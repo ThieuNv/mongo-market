@@ -1,4 +1,4 @@
-import {Injectable} from '@angular/core';
+import {EventEmitter, Injectable} from '@angular/core';
 import {Http, Response} from '@angular/http';
 import {Observable} from 'rxjs/Rx';   // include all operator like: map, catch,...
 
@@ -6,6 +6,8 @@ import {AppConfig} from '../app.config';
 
 @Injectable()
 export class UserService {
+
+  private fullName = new EventEmitter();
 
   constructor(private http: Http) {}
 
@@ -15,4 +17,10 @@ export class UserService {
       .map((response: Response) => response.json())
       .catch((error: Response) => Observable.throw(error.json()));
   }
+
+  /*getFullName(): Observable<String> {
+    return this.fullName.emit(localStorage.getItem('fullName'));
+  }*/
+
+
 }
