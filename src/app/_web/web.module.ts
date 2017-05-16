@@ -19,9 +19,6 @@ import {BoxReviewComponent} from './product/product-details/product-reviews/box-
 import {BoxRelativeComponent} from './product/product-relatives/box-relative/box-relative.component';
 import {CartComponent} from './cart/cart.component';
 
-
-
-
 @NgModule({
   declarations: [
     CategoriesComponent,

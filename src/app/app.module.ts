@@ -28,6 +28,11 @@ import { WebComponent } from './_web/web.component';
 import { SidenavComponent } from './_web/_shared/sidenav/sidenav.component';
 
 
+import {CustomerComponent} from './_web/customer/customer.component';
+import {SidenavCusComponent} from './_web/customer/sidenav-cus/sidenav-cus.component';
+import {HeaderCusComponent} from './_web/customer/header-cus/header-cus.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,6 +53,11 @@ import { SidenavComponent } from './_web/_shared/sidenav/sidenav.component';
 
     ManagerComponent,
     NavigationComponent,
+
+
+    CustomerComponent,
+    SidenavCusComponent,
+    HeaderCusComponent
 
   ],
   imports: [
