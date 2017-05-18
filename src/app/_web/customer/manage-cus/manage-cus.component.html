@@ -10,10 +10,10 @@
         <div class="card-content">
           <div class="row padding_left">
             <div class="fullName">
-              Full Name: <strong>Nguyen Van Thieu</strong>
+              Full Name: <strong> {{myUser ? myUser.fullName : 'Loading'}} </strong>
             </div>
               <div class="email">
-                Email: <strong>nguyenthieu2102@gmail.com</strong>
+                Email: <strong> {{myUser ? myUser.email: 'Loading'}} </strong>
               </div>
 
             <div class="news">Receive news: <strong>On</strong></div>

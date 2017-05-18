@@ -2,52 +2,97 @@
 
   <div class="row">
 
-    <div class="col s12 m6">
+    <div class="col s12 m12">
       <div class="card">
         <div class="card-image">
-          <div>Số điện thoại liên hệ nhận hàng</div>
-          <a class="btn-floating halfway-fab waves-effect waves-light blue"><i class="material-icons">add</i></a>
+          <div>Thông tin liên hệ của khách hàng. </div>
+          <a class="btn-floating halfway-fab waves-effect waves-light blue" (click)="openForm()"><i class="material-icons">add</i></a>
         </div>
         <div class="card-content">
-          <div class="row padding_left">
-            <div>Số điện thoại liên hệ nhận hàng không tồn tại. Thêm mới để chúng tôi có thể liên lạc và giao hàng đến cho bạn.</div>
-            <a routerLink="email">Thêm mới số điện thoại</a>
+          <div class="row">
+
+            <div class="col s12">
+              <div class="padding_left" *ngIf="customer?.phoneNumber">
+                <h4>Danh sách số điện thoại liên hệ: </h4> <span *ngIf="!customer?.phoneNumber"> <strong>Chưa có </strong> </span>
+                <div *ngFor="let phone of customer.phoneNumber">
+                  <div> {{phone}} </div>
+                </div>
+
+                <h4>Danh sách địa chỉ nhận hàng: </h4> <span *ngIf="!customer?.deliverAddress"> <strong>Chưa có </strong> </span>
+                <div *ngFor="let addr of customer.deliverAddress">
+                  <div> {{addr}} </div>
+                </div>
+
+                <h4>Danh sách địa chỉ trả tiền: </h4> <span *ngIf="!customer?.paymentAddress"> <strong>Chưa có </strong> </span>
+                <div *ngFor="let ad of customer.paymentAddress">
+                  <div> {{ad}} </div>
+                </div>
+              </div>
+
+              <strong>{{email? email: 'Loading...'}}</strong>
+            </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="col s12 m6">
+  <div class="row" *ngIf="showForm">
+    <div class="col s12 m8 offset-m2">
       <div class="card">
         <div class="card-image">
-          <div>Địa chỉ nhận hàng mặc định</div>
-          <a class="btn-floating halfway-fab waves-effect waves-light blue"><i class="material-icons">add</i></a>
+          <div>Thêm thông tin liên lạc.</div>
         </div>
         <div class="card-content">
-          <div class="row padding_left">
-            <div>Bạn chưa có địa chỉ người mua mặc định.</div>
-            <a routerLink="email">Thêm mới địa chỉ</a>
+          <div class="row">
+            <form [formGroup]="myForm" (ngSubmit)="onSubmit()" class="col s12">
+              <div class="row">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">phone</i>
+                  <input id="phone"
+                         type="text"
+                         formControlName="phone"
+                         class="validate"/>
+                  <label for="phone">Phone</label>
+                </div>
+
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">email</i>
+                  <input id="deliverAddr"
+                         type="text"
+                         formControlName="deliverAddr"
+                         class="validate"/>
+                  <label for="deliverAddr">Deliver Address</label>
+                </div>
+
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">email</i>
+                  <input id="paymentAddr"
+                         type="text"
+                         formControlName="paymentAddr"
+                         class="validate"/>
+                  <label for="paymentAddr">Payment Address</label>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col s6 center">
+                  <button class="btn blue lighten-2">
+                    Add <i class="material-icons right">send</i>
+                  </button>
+                </div>
+                <div class="col s6 center">
+                  <button class="btn blue lighten-2" (click)="closeForm()">
+                    Cancel
+                  </button>
+                </div>
+              </div>
+
+            </form>
           </div>
         </div>
       </div>
     </div>
-
-
-    <div class="col s12 m6">
-      <div class="card">
-        <div class="card-image">
-          <div>Địa chỉ thanh toán mặc định</div>
-          <a class="btn-floating halfway-fab waves-effect waves-light blue"><i class="material-icons">add</i></a>
-        </div>
-        <div class="card-content">
-          <div class="row padding_left">
-            <div>Địa chỉ thanh toán mặc định không tồn tại.</div>
-            <a routerLink="email">Thêm mới địa chỉ</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
   </div>
 
 </div>

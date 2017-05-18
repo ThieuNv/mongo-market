@@ -3,7 +3,7 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {Router} from '@angular/router';
 
 import {AuthService} from '../auth.service';
-import {User} from '../user.model';
+import {User} from '../../_models/user.model';
 
 @Component({
   selector: 'app-signin',
@@ -33,17 +33,13 @@ export class SigninComponent implements OnInit {
         data => {
           localStorage.setItem('token', data.token);
           localStorage.setItem('userId', data.userId);
-          localStorage.setItem('fullName', data.fullName);
+          console.log(data);
           if (data.targetAccount.indexOf('manager') === -1) {
-            this.router.navigateByUrl('/customer');
-          }
-          if (data.targetAccount.indexOf('customer') === -1) {
-            this.router.navigateByUrl('/manager');
+            return this.router.navigateByUrl('/page/customer');
           }
           this.router.navigateByUrl('/manager');
-          console.log(data);
         },
-        error => console.error(error)
+        error => console.log(error)
       );
     this.myForm.reset();
   }

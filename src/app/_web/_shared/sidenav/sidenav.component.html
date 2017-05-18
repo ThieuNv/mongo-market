@@ -18,8 +18,8 @@
         <li><a routerLink="detail-product">Detail Product</a></li>
         <li><a routerLink="cart">Cart</a></li>
         <li>
-          <a *ngIf="!isLoggedIn()" class='dropdown-button' href='#' data-activates='dropdown1'><i class="material-icons left">person_pin</i>Account Fucking</a>
-          <a *ngIf="isLoggedIn()" class='dropdown-button' href='#' data-activates='dropdown1'><i class="material-icons left">person_pin</i> {{fullName}} </a>
+          <a *ngIf="!isLoggedIn()" materialize="dropdown" class='dropdown-button' data-activates='dropdown1'><i class="material-icons left">person_pin</i>Account Fucking</a>
+          <a *ngIf="isLoggedIn()" materialize="dropdown" class='dropdown-button' data-activates='dropdown1'><i class="material-icons left">person_pin</i> {{fullName}} </a>
           <!-- Dropdown Structure -->
           <ul id='dropdown1' class='dropdown-content' style="width: 160px">
             <li *ngIf="!isLoggedIn()"><a routerLink="/signin">Sign In</a></li>

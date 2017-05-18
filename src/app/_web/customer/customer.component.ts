@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {UserService} from '../../_auth/user.service';
+import {User} from '../../_models/user.model';
 
 @Component({
   selector: 'app-customer',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomerComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private userService: UserService) {}
   ngOnInit() {
+    this.userService.getUserData()
+      .subscribe(
+        data => {
+          localStorage.setItem('validUser', JSON.stringify(data.obj));
+        }
+      );
   }
-
 }

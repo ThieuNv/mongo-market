@@ -1,5 +1,141 @@
 /* You can add global styles to this file, and also import other style files */
 
+
+.pad_8 {
+  padding: 8px !important;
+}
+.pad_left_8 {
+  padding-left: 8px !important;
+}
+.pad_right_8 {
+  padding-right: 8px !important;
+}
+.pad_left_right_8 {
+  padding-left: 8px !important;
+  padding-right: 8px !important;
+}
+.pad_top_bottom_8 {
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+}
+
+
+.pad_16 {
+  padding: 16px !important;
+}
+.pad_left_16 {
+  padding-left: 16px !important;
+}
+.pad_right_16 {
+  padding-right: 16px !important;
+}
+.pad_left_right_16 {
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+}
+.pad_top_bottom_16 {
+  padding-top: 16px !important;
+  padding-bottom: 16px !important;
+}
+
+
+.pad_24 {
+  padding: 24px !important;
+}
+.pad_left_24 {
+  padding-left: 24px !important;
+}
+.pad_right_24 {
+  padding-right: 24px !important;
+}
+.pad_left_right_24 {
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+}
+.pad_top_bottom_24 {
+  padding-top: 24px !important;
+  padding-bottom: 24px !important;
+}
+
+
+.pad_36 {
+  padding: 36px !important;
+}
+.pad_left_36 {
+  padding-left: 36px !important;
+}
+.pad_right_36 {
+  padding-right: 36px !important;
+}
+.pad_left_right_36 {
+  padding-left: 36px !important;
+  padding-right: 36px !important;
+}
+.pad_top_bottom_36 {
+  padding-top: 36px !important;
+  padding-bottom: 36px !important;
+}
+
+
+.mar_8 {
+  margin: 8px !important;
+}
+.mar_left_8 {
+  margin-left: 8px !important;
+}
+.mar_right_8 {
+  margin-right: 8px !important;
+}
+.mar_left_right_8 {
+  margin-left: 8px !important;
+  margin-right: 8px !important;
+}
+.mar_top_bottom_8 {
+  margin-top: 8px !important;
+  margin-bottom: 8px !important;
+}
+
+
+.mar_16 {
+  margin: 16px !important;
+}
+.mar_left_16 {
+  margin-left: 16px !important;
+}
+.mar_right_16 {
+  margin-right: 16px !important;
+}
+.mar_left_right_16 {
+  margin-left: 16px !important;
+  margin-right: 16px !important;
+}
+.mar_top_bottom_16 {
+  margin-top: 16px !important;
+  margin-bottom: 16px !important;
+}
+
+
+.mar_36 {
+  margin: 36px !important;
+}
+.mar_left_36 {
+  margin-left: 36px !important;
+}
+.mar_right_36 {
+  margin-right: 36px !important;
+}
+.mar_left_right_36 {
+  margin-left: 36px !important;
+  margin-right: 36px !important;
+}
+.mar_top_bottom_36 {
+  margin-top: 36px !important;
+  margin-bottom: 36px !important;
+}
+
+
+
+
 .padding_left {
   padding-left: 16px !important;
 }
@@ -22,6 +158,21 @@
 .padding_24 {
   padding: 24px !important;
 }
+
+
+.title_normal_20 {
+  font-size: 20px;
+  font-weight: bold;
+}
+.title_normal_24 {
+  font-size: 24px;
+  font-weight: bold;
+}
+.title_normal_30 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
 
 
 .margin_top_24 {

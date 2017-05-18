@@ -36,6 +36,10 @@ import {SidenavCusComponent} from './_web/customer/sidenav-cus/sidenav-cus.compo
 import {HeaderCusComponent} from './_web/customer/header-cus/header-cus.component';
 
 
+import { DropdownDirective } from './_directives/dropdown.directive';
+import {MaterializeDirective} from 'angular2-materialize/dist';
+
+
 
 @NgModule({
   declarations: [
@@ -64,7 +68,10 @@ import {HeaderCusComponent} from './_web/customer/header-cus/header-cus.componen
 
     CustomerComponent,
     SidenavCusComponent,
-    HeaderCusComponent
+    HeaderCusComponent,
+
+
+    DropdownDirective
 
   ],
   imports: [
