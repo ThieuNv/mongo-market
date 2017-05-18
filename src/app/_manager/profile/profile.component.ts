@@ -21,7 +21,7 @@ export class ProfileComponent implements OnInit {
       username: new FormControl(null, Validators.required),
       gender: new FormControl(null, Validators.required),
       about: new FormControl(null, Validators.required),
-      message: new FormControl(null, Validators.required),
+      slogan: new FormControl(null, Validators.required),
       facebook: new FormControl(null, Validators.required),
       twitter: new FormControl(null, Validators.required),
       google: new FormControl(null, Validators.required),
@@ -39,7 +39,7 @@ export class ProfileComponent implements OnInit {
     );
     const myManager = new Manager(this.myForm.value.username,
       this.myForm.value.gender, null,
-      this.myForm.value.about, media, this.myForm.value.message
+      this.myForm.value.about, media, this.myForm.value.slogan
     );
 
     console.log(myManager);

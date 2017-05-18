@@ -101,16 +101,14 @@
                 <div class="col s12 mar_top_bottom_24">
                   <div class="input-field col s6">
                     <i class="material-icons prefix">face</i>
-                    <input id="message"
+                    <input id="slogan"
                            type="text"
-                           formControlName="message"
+                           formControlName="slogan"
                            class="validate"/>
-                    <label for="message">Message</label>
+                    <label for="slogan">Slogan</label>
                   </div>
                   <div class="col s6">
-                    <ul>
-                      <li *ngFor="let mes of manager?.messages"> {{mes}}</li>
-                    </ul>
+                    <p>{{manager?.slogan}}</p>
                   </div>
                 </div>
 

@@ -150,10 +150,8 @@ router.patch("/update/manager/detail/:id", function(req, res, next) {
         "manager.about": req.body.about,
         "manager.socialMedia.facebook": req.body.socialMedia.facebook ? req.body.socialMedia.facebook: '',
         "manager.socialMedia.twitter": req.body.socialMedia.twitter ? req.body.socialMedia.twitter: '',
-        "manager.socialMedia.google": req.body.socialMedia.google ? req.body.socialMedia.google: ''
-      },
-      $push: {
-        "manager.messages" : req.body.message
+        "manager.socialMedia.google": req.body.socialMedia.google ? req.body.socialMedia.google: '',
+        "manager.slogan": req.body.slogan
       }
     },
     {new: true, upsert: true},

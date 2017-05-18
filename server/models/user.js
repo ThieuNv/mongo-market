@@ -30,7 +30,7 @@ const userSchema = new Schema({
       twitter: {type: String},
       google: {type: String}
     },
-    messages: {type: Array}
+    slogan: {type: String}
   }
 });
 
