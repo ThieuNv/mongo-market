@@ -148,9 +148,9 @@ router.patch("/update/manager/detail/:id", function(req, res, next) {
         "manager.username": req.body.username,
         "manager.gender": req.body.gender,
         "manager.about": req.body.about,
-        "manager.socialMedia.facebook": req.body.facebook ? req.body.facebook: '',
-        "manager.socialMedia.twitter": req.body.twitter ? req.body.twitter: '',
-        "manager.socialMedia.google": req.body.google ? req.body.google: ''
+        "manager.socialMedia.facebook": req.body.socialMedia.facebook ? req.body.socialMedia.facebook: '',
+        "manager.socialMedia.twitter": req.body.socialMedia.twitter ? req.body.socialMedia.twitter: '',
+        "manager.socialMedia.google": req.body.socialMedia.google ? req.body.socialMedia.google: ''
       },
       $push: {
         "manager.messages" : req.body.message

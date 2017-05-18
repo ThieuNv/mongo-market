@@ -115,6 +115,25 @@
 }
 
 
+.mar_24 {
+  margin: 24px !important;
+}
+.mar_left_24 {
+  margin-left: 24px !important;
+}
+.mar_right_24 {
+  margin-right: 24px !important;
+}
+.mar_left_right_24 {
+  margin-left: 24px !important;
+  margin-right: 24px !important;
+}
+.mar_top_bottom_24 {
+  margin-top: 24px !important;
+  margin-bottom: 24px !important;
+}
+
+
 .mar_36 {
   margin: 36px !important;
 }

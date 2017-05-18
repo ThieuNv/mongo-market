@@ -436,3 +436,26 @@ Add more css to be cool.(messages.component.css)
 
 
 
+
+
+=================================== Develop ====================================
+
+18/5/2017
+  customer
+
+  manager : {
+
+  	role_author (Sua thong tin, Viet bai)
+  	role_category (Sua thong tin, Viet bai, Them category)
+  	role_admin (Sua thong tin, Viet bai, Them category, Xoa orders, Xoa user)
+  	role_root ( Sua thong tin, Viet bai, Them category, Xoa orders, Xoa user, Cap quyen cho customer)
+
+
+  1. Update code phan client view for customer, connected to database and update profile
+  2. Write api for manager
+
+
+19/5/2017
+
+  1. Write form for manager detail.
+  2. Write table to manage user.

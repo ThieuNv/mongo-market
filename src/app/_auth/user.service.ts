@@ -37,6 +37,16 @@ export class UserService {
       .catch((error: Response) => Observable.throw(error));
   }
 
+// localhost:3000/apiUser/update/manager/detail/:id
+  updateManagerDetail(myManager) {
+    const token = localStorage.getItem('token') ? '?token=' + localStorage.getItem('token') : '';
+    const userId = localStorage.getItem('userId') ? localStorage.getItem('userId') : '';
+    const body = JSON.stringify(myManager);
+    const headers = new Headers({'Content-Type': 'application/json'});
+    return this.http.patch(AppConfig.dns_local + '/update/manager/detail/' + userId + token , body, { headers: headers })
+      .map((response: Response) => response.json())
+      .catch((error: Response) => Observable.throw(error));
+  }
 
   getEmail() {
     return localStorage.getItem('validUser') ? JSON.parse(localStorage.getItem('validUser')).email : '';
@@ -69,4 +79,5 @@ export class UserService {
     }
     return null;
   }
+
 }
