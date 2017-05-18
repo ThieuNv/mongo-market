@@ -37,6 +37,14 @@ export class UserService {
       .catch((error: Response) => Observable.throw(error));
   }
 
+  // localhost:3000/apiUser/admin/get/accounts
+  getAccountsByAdmin() {
+    const token = localStorage.getItem('token') ? '?token=' + localStorage.getItem('token') : '';
+    return this.http.get(AppConfig.dns_local + '/admin/get/accounts' + token)
+      .map((response: Response) => response.json())
+      .catch((error: Response) => Observable.throw(error));
+  }
+
 // localhost:3000/apiUser/update/manager/detail/:id
   updateManagerDetail(myManager) {
     const token = localStorage.getItem('token') ? '?token=' + localStorage.getItem('token') : '';

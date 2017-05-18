@@ -4,7 +4,47 @@
   <!-- //////////////////////////////////////////////////////////////////////////// -->
 
   <!--Write content here-->
-  <h1>Amazing . Account works</h1>
+  <div class="row">
+    <div class="col s12">
+
+      <h4>Quản lý danh sách người dùng.</h4>
+      <div class="card">
+        <div class="card-content">
+          <table class="bordered highlight responsive-table">
+            <thead>
+            <tr>
+              <th>###</th>
+              <th>Full Name</th>
+              <th>Email</th>
+              <th>Birthday</th>
+              <th>Target Account</th>
+              <th>Created At</th>
+              <th>Delete</th>
+            </tr>
+            </thead>
+
+            <tbody>
+              <tr *ngFor="let account of accounts; let ind = index">
+                <td> {{ind}} </td>
+                <td> {{account.fullName}} </td>
+                <td> {{account.email}} </td>
+                <td> {{account.birthday}} </td>
+                <td>
+                  <ul *ngFor="let tar of account.targetAccount">
+                    <li> {{tar}} </li>
+                  </ul>
+                </td>
+                <td> {{account.createdAt}} </td>
+                <td> <i class="small material-icons">delete</i> </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
   <!-- //////////////////////////////////////////////////////////////////////////// -->
 
 </div>

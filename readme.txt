@@ -458,4 +458,8 @@ Add more css to be cool.(messages.component.css)
 19/5/2017
 
   1. Write form for manager detail.
+  2. Connect to database and update manager detail
   2. Write table to manage user.
+    https://datatables.net/
+
+

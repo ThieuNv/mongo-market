@@ -98,6 +98,7 @@ router.get("/data", function(req, res, next) {
 // localhost:3000/apiUser/update/customer/contact/:id
 // localhost:3000/apiUser/update/manager/detail/:id
 // localhost:3000/apiUser/admin/delete/account/:id
+// localhost:3000/apiUser/admin/get/accounts
 // localhost:3000/apiUser/root/up-role/account/:id
 
 router.patch("/update/account/profile/:id", function(req, res, next) {
@@ -161,6 +162,28 @@ router.patch("/update/manager/detail/:id", function(req, res, next) {
       sendResult(res, 201, 'Update user successful!', user);
     });
 });
+
+
+// localhost:3000/apiUser/admin/get/accounts
+router.get("/admin/get/accounts", function(req, res, next) {
+  const decoded = jwt.decode(req.query.token);
+
+  User.findById(decoded.user._id, function(err, user) {
+    if(err)
+      return handleError(res, 500, 'An error occured', err);
+    if(!user)
+      return handleError(res, 500, 'No user Found', { message: 'User not found'});
+    if(user.manager.role.indexOf("admin") === -1 && user.manager.role.indexOf("root") === -1)
+      return handleError(res, 401, "Wrong permission!", { message: "You don't have the right permission to do that."});
+
+    User.find({}, {customer: 0, maanger: 0}, function(err, accounts) {
+      if(err)
+        return handleError(res, 500, 'An error occured', err);
+      sendResult(res, 201, "Found accounts successful", accounts);
+    });
+  })
+});
+
 
 
 // localhost:3000/apiUser/admin/delete/account/:id
