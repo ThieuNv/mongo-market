@@ -459,7 +459,16 @@ Add more css to be cool.(messages.component.css)
 
   1. Write form for manager detail.
   2. Connect to database and update manager detail
-  2. Write table to manage user.
+  3. Write table to manage user.
     https://datatables.net/
 
+
+20/5/2017
+  4. Write form for author write a new post
+  5. Adding new Editor in Project
+  6. Connect post of author to database
+
+editor:
+  https://github.com/chymz/ng2-ckeditor
+  https://libraries.io/explore/typescript-angular2-libraries?keywords=ckeditor
 

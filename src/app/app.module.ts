@@ -37,7 +37,6 @@ import {HeaderCusComponent} from './_web/customer/header-cus/header-cus.componen
 
 
 import { DropdownDirective } from './_directives/dropdown.directive';
-import {MaterializeDirective} from 'angular2-materialize/dist';
 
 
 
@@ -71,7 +70,9 @@ import {MaterializeDirective} from 'angular2-materialize/dist';
     HeaderCusComponent,
 
 
-    DropdownDirective
+    DropdownDirective,
+
+
 
   ],
   imports: [

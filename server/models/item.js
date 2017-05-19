@@ -2,33 +2,70 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const itemSchema = new Schema({
-  title: { type: String, required: true },
-  slogan: {type: String, required: true},
-  description: {type: String, required: true},
-  stars: {type: Number},
+  name: { type: String, required: true },
   categories: {type: Array, required: true},
-  imgUrls: {type: Array, required: true},
-  priceSale: {type: Number},
-  priceActual: {type: Number},
-  inStock: {type: Number},
   tags: {type: Array},
+  createdAt: {type: Date},
+  updatedAt: {type: Date},
+
+  details: {
+    sku: {type : String},
+    star: {type: Number},
+    slogan: {type: String},
+    description: {type: String},
+    manufacturer: {
+      name: {type: String},
+      serialNumber: {type: String},
+      location: {type: String}
+    },
+    price: {
+      actual: {type: Number},
+      sale: {type: Number},
+      saleEndDate: {type: Date}
+    },
+    status: {type: String},
+    inStock: {type: Number},
+    guarantee: {type: String}
+  },
+
+  specs: [
+    {
+      key: {type: String},
+      value: {type: String}
+    }
+  ],
+  imgs: [
+    {
+      src: {type: String},
+      title: {type: String},
+      width: {type: Number},
+      height: {type: Number}
+    }
+  ],
   reviews: [
     {
       name: {type: String},
       comment: {type: String},
-      stars: {type: Number},
-      date: {type: Date}
+      star: {type: Number},
+      atDate: {type: Date}
     }
   ],
-  details: {
-    manufacturer: {type: String},
-    serialNumber: {type: String},
-    size: {type: String},
-    color: {type: String},
-    guarantee: {type: String}
-  },
+
   userId: { type: Schema.Types.ObjectId, ref: "User" }
 });
 
 module.exports = mongoose.model("Item", itemSchema);
 
+
+/*
+ https://dzone.com/articles/product-catalog-part-1-schema
+
+ type: {type: String, required: true},
+ size: {type: String},
+ color: {type: String},
+ length: {type: Number},
+ material: {type: String}
+
+
+
+ */
