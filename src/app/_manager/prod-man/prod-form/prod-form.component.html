@@ -1,13 +1,178 @@
 <div class="row">
   <div class="col s12">
     <div class="title">
-      <h4>Create New Product.</h4>
+      <h4>Create new Product</h4>
     </div>
     <div class="card">
       <div class="card-content">
         <div class="row">
+          <form [formGroup]="createProductForm" (ngSubmit)="onSubmit()" class="col s12">
+            <div class="row">
+
+              <div class="input-field col s6">
+                <input id="productId"
+                       type="hidden"
+                       class="validate"
+                       formControlName="productId"/>
+              </div>
+
+              <div class="input-field col s6">
+                <i class="material-icons prefix">account_circle</i>
+                <input id="name"
+                       type="text"
+                       class="validate"
+                       formControlName="name"/>
+                <label for="name">Name of Product</label>
+              </div>
+
+              <div class="input-field col s6">
+                <i class="material-icons prefix">account_circle</i>
+                <input id="sku"
+                       type="text"
+                       class="validate"
+                       formControlName="sku"/>
+                <label for="sku">Sku</label>
+              </div>
+
+              <div class="input-field col s6">
+                <i class="material-icons prefix">account_circle</i>
+                <select materialize="material_select" [materializeSelectOptions]="selectOptions" id="category" formControlName="category">
+                  <option value="" disabled selected>Choose Category</option>
+                  <option *ngFor="let option of selectOptions" [value]="option.value">{{option.name}}</option>
+                </select>
+              </div>
+
+              <div class="input-field col s6">
+                <i class="material-icons prefix">account_circle</i>
+                <input id="tags"
+                       type="text"
+                       class="validate"
+                       formControlName="tags"/>
+                <label for="tags">Tags</label>
+              </div>
 
 
+              <div class="input-field col s12">
+                <i class="material-icons prefix">account_circle</i>
+                <input id="slogan"
+                       type="text"
+                       class="validate"
+                       formControlName="slogan"/>
+                <label for="slogan">Slogan of Product</label>
+              </div>
+
+
+              <div class="input-field col s4">
+                <i class="material-icons prefix">account_circle</i>
+                <input id="manuName"
+                       type="text"
+                       class="validate"
+                       formControlName="manuName"/>
+                <label for="manuName">Name of Manufacturer</label>
+              </div>
+
+              <div class="input-field col s4">
+                <i class="material-icons prefix">account_circle</i>
+                <input id="serialNumber"
+                       type="text"
+                       class="validate"
+                       formControlName="serialNumber"/>
+                <label for="serialNumber">Serial number of Manufacturer</label>
+              </div>
+
+
+              <div class="input-field col s4">
+                <i class="material-icons prefix">account_circle</i>
+                <input id="location"
+                       type="text"
+                       class="validate"
+                       formControlName="location"/>
+                <label for="location">Location of Manufacturer</label>
+              </div>
+
+              <div class="input-field col s6">
+                <i class="material-icons prefix">account_circle</i>
+                <input id="actualPrice"
+                       type="text"
+                       class="validate"
+                       formControlName="actualPrice"/>
+                <label for="actualPrice">Price</label>
+              </div>
+
+              <div class="col s6 mar_top_bottom_24">
+                <a class="btn blue lighten-2" (click)="onSale()">Make this product in sale</a>
+              </div>
+
+              <div *ngIf="isSale" class="input-field col s6">
+                <i class="material-icons prefix">account_circle</i>
+                <input id="salePrice"
+                       type="text"
+                       class="validate"
+                       formControlName="salePrice"/>
+                <label for="salePrice">Price for sale</label>
+              </div>
+
+              <div *ngIf="isSale" class="input-field col s6">
+                <i class="material-icons prefix">today</i>
+                <span style="margin-left:45px;color: #928e8e;">Sale end At</span>
+                <input id="saleEndDate"
+                       type="date"
+                       formControlName="saleEndDate"
+                       class="validate"/>
+              </div>
+
+
+              <div class="input-field col s4">
+                <i class="material-icons prefix">account_circle</i>
+                <select materialize="material_select" [materializeSelectOptions]="selectStatus" formControlName="status">
+                  <option value="" disabled selected>Choose Status of Product</option>
+                  <option *ngFor="let option of selectStatus" [value]="option.value">{{option.name}}</option>
+                </select>
+              </div>
+
+
+              <div class="input-field col s4">
+                <i class="material-icons prefix">account_circle</i>
+                <input id="inStock"
+                       type="number"
+                       class="validate"
+                       min="1" max="10000"
+                       formControlName="inStock"/>
+                <label for="inStock">In stock</label>
+              </div>
+
+              <div class="input-field col s4">
+                <i class="material-icons prefix">account_circle</i>
+                <select materialize="material_select" [materializeSelectOptions]="selectGuarantees" formControlName="guarantee">
+                  <option value="" disabled selected>Choose Guarantee</option>
+                  <option *ngFor="let option of selectGuarantees" [value]="option.value">{{option.name}}</option>
+                </select>
+              </div>
+
+              <div class="input-field col s12">
+                <i class="material-icons prefix">account_circle</i>
+                <textarea id="description"
+                          class="validate"
+                          formControlName="description"></textarea>
+                <label for="description">Description</label>
+              </div>
+
+
+              <div class="row">
+                <div class="col m6 center">
+                  <button class="btn blue lighten-2" type="submit">
+                    Up Product<i class="material-icons right">send</i>
+                  </button>
+                </div>
+                <div class="col m6 center">
+                  <a class="btn blue lighten-2" (click)="resetForm()">
+                    Reset
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </form>
         </div>
       </div>
       <div class="card-action">

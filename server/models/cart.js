@@ -3,9 +3,9 @@ const Schema = mongoose.Schema;
 
 const cartSchema = new Schema({
   userId: {type: Schema.Types.ObjectId, ref: "User"},
-  items: [
+  products: [
     {
-      itemId: {type: Schema.Types.ObjectId, ref: "Item"},
+      productId: {type: Schema.Types.ObjectId, ref: "Product"},
       quantity: {type: Number}
     }
   ]

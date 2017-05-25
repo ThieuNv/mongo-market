@@ -33,7 +33,6 @@ export class SigninComponent implements OnInit {
         data => {
           localStorage.setItem('token', data.token);
           localStorage.setItem('userId', data.userId);
-          console.log(data);
           if (data.targetAccount.indexOf('manager') === -1) {
             return this.router.navigateByUrl('/page/customer');
           }

@@ -5,11 +5,17 @@ import {Review} from './review.model';
 
 export class Product {
   constructor(public name: string,
-              public categories: string[],
+              public sku: string,
+              public category: string,
               public details: DetailProduct,
-              public specs: Spec[],
+              public tags: string[],
+              public createdAt?: Date,
+              public updatedAt?: Date,
+              public specs?: Spec[],
               public imgs?: Image[],
-              public tags?: string[],
-              public reviews?: Review[]
+              public reviews?: Review[],
+              public username?: string,
+              public userId?: string,
+              public productId?: string
   ) { }
 }

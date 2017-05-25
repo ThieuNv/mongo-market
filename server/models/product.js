@@ -1,20 +1,25 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
+const User = require("./user");
 
-const itemSchema = new Schema({
+const productSchema = new Schema({
   name: { type: String, required: true },
-  categories: {type: Array, required: true},
+  sku: {type : String},
+  category: {type: String, required: true},
+  parentCategories: {type: Array},
   tags: {type: Array},
   createdAt: {type: Date},
   updatedAt: {type: Date},
 
   details: {
-    sku: {type : String},
     star: {type: Number},
     slogan: {type: String},
     description: {type: String},
+    status: {type: String},
+    inStock: {type: Number},
+    guarantee: {type: Number},
     manufacturer: {
-      name: {type: String},
+      manuName: {type: String},
       serialNumber: {type: String},
       location: {type: String}
     },
@@ -22,10 +27,7 @@ const itemSchema = new Schema({
       actual: {type: Number},
       sale: {type: Number},
       saleEndDate: {type: Date}
-    },
-    status: {type: String},
-    inStock: {type: Number},
-    guarantee: {type: String}
+    }
   },
 
   specs: [
@@ -44,17 +46,24 @@ const itemSchema = new Schema({
   ],
   reviews: [
     {
-      name: {type: String},
+      author: {type: String},
       comment: {type: String},
       star: {type: Number},
       atDate: {type: Date}
     }
   ],
 
-  userId: { type: Schema.Types.ObjectId, ref: "User" }
+  user: { type: Schema.Types.ObjectId, ref: "User" }
 });
 
-module.exports = mongoose.model("Item", itemSchema);
+productSchema.post("remove", function(product) {
+  User.findById(product.user, function(err, user) {
+    user.manager.products.pull(product);
+    user.save();
+  })
+});
+
+module.exports = mongoose.model("Product", productSchema);
 
 
 /*

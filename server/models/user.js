@@ -25,12 +25,13 @@ const userSchema = new Schema({
     gender: {type: String},
     role: {type: Array},
     about: {type: String},
+    livingMotto: {type: String},
     socialMedia: {
       facebook: {type: String},
       twitter: {type: String},
       google: {type: String}
     },
-    slogan: {type: String}
+    products: [{type: Schema.Types.ObjectId, ref: "Product"}]
   }
 });
 

@@ -1,0 +1,70 @@
+<div class="col s12">
+  <div class="card">
+    <div class="card-action">
+      <div class="card_action">
+        <div class="col s1">
+          <strong *ngIf="!isShowProductDetail" class="cursor">
+            <span><i (click)="showProduct()" class="material-icons">arrow_downward</i></span>
+          </strong>
+          <strong *ngIf="isShowProductDetail"  class="cursor">
+            <span><i (click)="hideProduct()" class="material-icons">arrow_upward</i></span>
+          </strong>
+        </div>
+
+        <div class="col s1">
+          <strong>STT:</strong> {{ind + 1}}
+        </div>
+
+        <div class="col s5">
+          <strong>Name:</strong> <a href="">{{product.name}}</a>
+        </div>
+
+        <div class="col s3">
+          <strong>Author:</strong> <a href="">{{product?.username}}</a>
+        </div>
+
+        <div class="col s2" *ngIf="isShowProductDetail">
+          <div class="col s6">
+            <div class="card_action_btn" (click)="onEdit()">
+              Edit <span><i class="material-icons">mode_edit</i></span>
+            </div>
+          </div>
+
+          <div class="col s6">
+            <div class="card_action_btn" (click)="onDelete()">
+              Delete <span><i class="material-icons">delete_forever</i></span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="card-content" *ngIf="isShowProductDetail">
+      <div class="card_content">
+        <div class="col s4">
+          <div><strong>Name: </strong> {{product.name}}</div>
+          <div><strong>SKU: </strong> {{product.sku}}</div>
+          <div><strong>Category: </strong> {{product.category}}</div>
+          <div><strong>Tags: </strong> {{product.tags}}</div>
+        </div>
+
+        <div class="col s4">
+          <div><strong>Actual:</strong> {{product.details.price.actual | currency:'USD':true:'1.2-2'}}</div>
+          <div><strong>Sale: </strong> {{product?.details.price.sale | currency:'USD':true:'1.2-2'}}</div>
+          <div><strong>Sale end date:</strong> {{product?.details.price.saleEndDate | date: 'dd/MM/yyyy'}}</div>
+          <div><strong>Created at:</strong> {{product?.createdAt | date: 'dd/MM/yyyy'}}</div>
+          <div><strong>Updated at:</strong> {{product?.updatedAt | date: 'dd/MM/yyyy'}}</div>
+        </div>
+
+        <div class="col s4">
+          <div><strong>Slogan: </strong> {{product.details?.slogan}}</div>
+          <div><strong>Status: </strong> {{product.details?.status}}</div>
+          <div><strong>In Stock: </strong> {{product.details?.inStock}} product</div>
+          <div><strong>Guarantee: </strong> {{product.details?.guarantee}} month</div>
+          <div><strong>Manufacturer: </strong> {{product.details.manufacturer?.manuName}}</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

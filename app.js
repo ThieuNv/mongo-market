@@ -11,6 +11,7 @@ const mongoose = require("mongoose");
 // Get our API routes
 const apiMessage = require('./server/routes/apiMessage');
 const apiUser = require('./server/routes/apiUser');
+const apiProduct = require('./server/routes/apiProduct');
 
 const app = express();
 
@@ -38,6 +39,7 @@ app.use(function(req, res, next) {
 // Set our api routes
 app.use('/apiMessage', apiMessage);
 app.use('/apiUser', apiUser);
+app.use('/apiProduct', apiProduct);
 
 // Catch all other routes and return the index file
 app.get('*', function (req, res) {

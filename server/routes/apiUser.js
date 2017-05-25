@@ -53,7 +53,7 @@ router.post("/signin", function(req, res, next) {
     if(!bcrypt.compareSync(req.body.password, user.password))
       return handleError(res, 401, "Signin Failed", { message: "Invalid login credentials"});
 
-    const token = jwt.sign({user: {_id: user._id, targetAccount: user.targetAccount}}, 'secret', {expiresIn : 7200});
+    const token = jwt.sign({user: user}, 'secret', {expiresIn : 7200});
 
     res.status(200).json({
       message: "Successfully logged in",
