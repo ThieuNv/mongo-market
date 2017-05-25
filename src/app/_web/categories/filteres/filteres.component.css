@@ -2,3 +2,13 @@
   width: 100%;
   margin: 8px 0;
 }
+
+#filter_categories_wrapper {
+  overflow: hidden;
+}
+.filter_categories_item > a {
+  width: 100%;
+}
+.filter_categories_item {
+  margin: 5px 0;
+}

@@ -1,5 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 
+.mar_pad_0 {
+  padding: 0 !important;
+}
+
+.row {
+  margin: 0 !important;
+}
 
 .pad_8 {
   padding: 8px !important;

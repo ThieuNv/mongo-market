@@ -1,0 +1,8 @@
+#header_categories {
+  overflow: visible;
+  padding-top: 20px;
+}
+#body_categories {
+  overflow: auto;
+  margin: 20px 0;
+}

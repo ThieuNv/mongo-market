@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import {CommonModule} from '@angular/common';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { MaterializeModule } from 'angular2-materialize';
 
 import {CategoriesComponent} from './categories/categories.component';
@@ -18,6 +19,7 @@ import {ProductReviewsComponent} from './product/product-details/product-reviews
 import {BoxReviewComponent} from './product/product-details/product-reviews/box-review/box-review.component';
 import {BoxRelativeComponent} from './product/product-relatives/box-relative/box-relative.component';
 import {CartComponent} from './cart/cart.component';
+
 
 @NgModule({
   declarations: [
@@ -39,7 +41,7 @@ import {CartComponent} from './cart/cart.component';
     CartComponent,
   ],
   imports: [
-    CommonModule,
+    CommonModule, FormsModule, ReactiveFormsModule,
     MaterializeModule
   ]
 })
