@@ -15,6 +15,9 @@ export const WEB_ROUTES: Routes =  [
     path: 'detail-product', component: ProductComponent
   },
   {
+    path: 'detail-product/:id', component: ProductComponent
+  },
+  {
     path: 'cart', component: CartComponent
   },
   {

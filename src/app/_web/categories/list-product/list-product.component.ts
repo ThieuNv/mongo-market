@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {Product} from '../../../_models/product/product.model';
+import {ProductService} from '../../../_services/product.service';
 
 @Component({
   selector: 'app-list-product',
@@ -8,24 +10,28 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
 })
 export class ListProductComponent implements OnInit {
 
-  listProduct = [1, 2, 3, 4, 5, 6];
-
+  products: Product[] = [];
 
   filterForm: FormGroup;
   selectOptions: any;
 
-  constructor() {
+
+  constructor(private productService: ProductService) {
     this.createFilterForm();
     this.createOther();
   }
 
   ngOnInit() {
+    this.productService.getAllProducts()
+      .subscribe(
+        (products: Product[]) => this.products = products,
+        (error: any) => console.log(error)
+      );
   }
 
   onSubmit() {
     console.log('Submit form');
   }
-
 
   private createOther() {
     this.selectOptions = [

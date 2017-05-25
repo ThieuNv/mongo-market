@@ -46,8 +46,10 @@
     <div class="col s12">
       <div id="content_categories">
         <ul class="row produktliste">
-          <li data-url-follow="/roboter/saugroboter/irobot-roomba-780/" class="col s12 m6 l4" *ngFor="let i of listProduct">
-            <app-single-product></app-single-product>
+          <li data-url-follow="/roboter/saugroboter/irobot-roomba-780/"
+              class="col s12 m6 l4"
+              *ngFor="let prod of products; let ind = index;">
+            <app-single-product [product] = "prod" [ind] = "ind"></app-single-product>
           </li>
         </ul>
       </div>
