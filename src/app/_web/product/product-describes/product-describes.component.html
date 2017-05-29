@@ -1,39 +1,81 @@
-<div class="col-lg-4 col-md-4 col-sm-5 product-shop">
+<div id="product_describes_wrapper">
 
   <div class="row">
+    <div class="col s12">
+      <h3>{{product?.name}}</h3>
+    </div>
 
     <div class="col m4 l6">
       <div class="price">
-        <span class="price">$46.49</span>
+        <div *ngIf="product?.details.price.sale">
+          <span>Sale: </span>
+          <span class="price_sale">
+            {{product?.details.price?.sale | currency:'USD':true:'1.2-2'}}
+          </span>
+          End At:
+          <span class="price_sale_end_at">
+            {{product?.details.price?.saleEndDate | date: 'dd/MM/yyyy'}}
+          </span>
+        </div>
+
+        <div *ngIf="product?.details.price.sale">
+          <span>Actual payment: </span>
+          <span class="price_actual">
+            {{product?.details.price?.actual | currency:'USD':true:'1.2-2'}}
+          </span>
+        </div>
       </div>
     </div>
 
-    <div class="col m8 l6 right">
-      <div class="product_instock">
-        <span>In stock</span>
-      </div>
-      <div class="product_serial_number">
-        Product SKU: <strong>SST-X1U</strong>
+    <div class="col m8 l6">
+      <div class="product_infor_wrapper">
+        <div class="product_serial_number">
+          Product SKU: <strong> {{product?.sku}}</strong>
+        </div>
+
+        <div class="product_instock">
+          <span>In stock </span> <strong> {{product?.details?.inStock}} items</strong>
+        </div>
+
+        <div class="product_manufacturer">
+          <span>Manufacturer: </span> <strong> {{product?.details?.manufacturer?.manuName}}</strong>
+        </div>
+
+        <div class="product_guarantee">
+          <span>Guarantee: </span> <strong> {{product?.details?.guarantee}} Month</strong>
+        </div>
       </div>
     </div>
   </div>
 
   <div class="row">
-    <div class="col s12 l12">
-      <div class="input-field col s12">
+    <div class="col s12">
+      <div class="input-field col s6">
         <select materialize="material_select">
-          <option value="" disabled selected>Choose your option</option>
-          <option value="1">Option 1</option>
-          <option value="2">Option 2</option>
-          <option value="3">Option 3</option>
+          <option value="" disabled selected>Choice your size</option>
+          <option value="1">Small</option>
+          <option value="2">Medium</option>
+          <option value="3">Large</option>
         </select>
-        <label>Materialize Select</label>
+        <label>Size </label>
+      </div>
+
+      <div class="input-field col s6">
+        <select materialize="material_select">
+          <option value="" disabled selected>Choice your color</option>
+          <option value="1">Black</option>
+          <option value="2">White</option>
+          <option value="3">Red</option>
+          <option value="4">Green</option>
+          <option value="5">Blue</option>
+        </select>
+        <label>Color </label>
       </div>
 
       <p class="required">* Required Fields</p>
     </div>
 
-    <div class="col s12 l12">
+    <div class="col s12">
       <div class="add-to-cart">
         <div class="input-field col s3">
           <input placeholder="2" id="number" type="number" class="validate">
@@ -47,26 +89,14 @@
       </div>
     </div>
 
-    <div class="col s12 l12">
+    <div class="col s12">
       <div class="product-social-media">
         <ul class="list-inline">
-          <li class="col s1">
-            <a href="#" title="Share on Facebook">
+          <li class="col s1" *ngFor="let socMe of socialMedia">
+            <a href="{{socMe.href}}" title={{socMe.title}}>
               <img
-            src="https://cdnskin-esyrz3xlyt4.netdna-ssl.com/skin/frontend/rwd/rdxsports/images/social-media_19.jpg"
-            alt="Facebook">
-            </a>
-          </li>
-          <li class="col s1">
-            <a href="#" title="Tweet"><img
-            src="https://cdnskin-esyrz3xlyt4.netdna-ssl.com/skin/frontend/rwd/rdxsports/images/social-media_21.jpg"
-            alt="Twitter">
-            </a>
-          </li>
-          <li class="col s1">
-            <a href="#" title="Pin it">
-            <img src="https://cdnskin-esyrz3xlyt4.netdna-ssl.com/skin/frontend/rwd/rdxsports/images/social-media_23.jpg"
-            alt="Pin">
+            src={{socMe.src}}
+            alt={{socMe.alt}}>
             </a>
           </li>
         </ul>
@@ -74,7 +104,7 @@
       </div><!-- product-social-media -->
     </div>
 
-    <div class="col s12 l12">
+    <div class="col s12">
       <div class="delivery-returns">
         <strong>Delivery &amp; Returns</strong>
         <hr>

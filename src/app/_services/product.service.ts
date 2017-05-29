@@ -87,4 +87,14 @@ export class ProductService {
   editProduct(product: Product) {
     this.productIsEdit.emit(product);
   }
+
+  getProductById(id: string) {
+   /* this.products.filter(function(prod) {
+      if (prod.productId === id) {
+        return prod;
+      }
+    });
+    */
+    return this.products.filter(prod => prod.productId === id);
+  }
 }

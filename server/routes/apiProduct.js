@@ -21,6 +21,20 @@ sendResult = function(res, code, title, result) {
   });
 };
 
+// localhost:3000/apiProduct/all
+router.get("/all", function(req, res, next) {
+  Product.find()
+    .populate('user')
+    .exec(function(err, products) {
+      if(err)
+        return handleError(res, 500, "An error occurred", err);
+      if(!products)
+        return handleError(res, 404, "No product found", { message: "Found nothing!"});
+      sendResult(res, 200, "Get data successfully!", products);
+    })
+});
+
+
 // Check every request of api will have jwt
 router.use("/", function(req, res, next) {
   jwt.verify(req.query.token, 'secret', function(err, decoded) {
@@ -37,19 +51,6 @@ router.use("/", function(req, res, next) {
 // localhost:3000/apiProduct/delete/:id
 
 
-
-// localhost:3000/apiProduct/all
-router.get("/all", function(req, res, next) {
-  Product.find()
-    .populate('user')
-    .exec(function(err, products) {
-      if(err)
-        return handleError(res, 500, "An error occurred", err);
-      if(!products)
-        return handleError(res, 404, "No product found", { message: "Found nothing!"});
-      sendResult(res, 200, "Get data successfully!", products);
-    })
-});
 
 
 // localhost:3000/apiProduct/create

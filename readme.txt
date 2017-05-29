@@ -472,3 +472,20 @@ editor:
   https://github.com/chymz/ng2-ckeditor
   https://libraries.io/explore/typescript-angular2-libraries?keywords=ckeditor
 
+25/5/2017
+  7. Update and Delete product done with database and client
+  8. Fixing frontend page categories and tab in page detail-product
+
+26/5/2017
+  9. Pull out product data from data and push into categories page done.
+
+// Not done
+  10. Fixing data push into detail-product page.
+  11. Create Cart Collection in database.
+
+  12. Fixing frontend page cart.
+  13. Add functionality to add to cart.
+
+  14. CRUD Cart
+  15. Update Cart Collection connect with User collection and Product collection
+  16. .....
