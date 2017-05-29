@@ -73,6 +73,7 @@ router.post("/create", function(req, res, next) {
       tags: bodyData.tags,
       createdAt: new Date(),
       updatedAt: new Date(),
+      specs: bodyData.specs,
       details: {
         star: bodyData.details.star,
         slogan: bodyData.details.slogan,

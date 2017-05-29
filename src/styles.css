@@ -8,6 +8,10 @@
   margin: 0 !important;
 }
 
+.display_none {
+  display: none;
+}
+
 .pad_8 {
   padding: 8px !important;
 }

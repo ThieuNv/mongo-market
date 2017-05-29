@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {Form, FormArray, FormControl, FormGroup, Validators} from '@angular/forms';
 import {ProductService} from '../../../_services/product.service';
 import {Product} from '../../../_models/product/product.model';
 import {Price} from '../../../_models/product/price.model';
 import {Manufacturer} from '../../../_models/product/manufacturer.model';
 import {DetailProduct} from '../../../_models/product/detail-product.model';
+import {Spec} from '../../../_models/product/spec.model';
 
 @Component({
   selector: 'app-prod-form',
@@ -67,7 +68,7 @@ export class ProdFormComponent implements OnInit {
   }
 
   createForm() {
-    let name =  '';
+    let name =  null;
     let category =  '';
     let tags = null;
     let sku = '';
@@ -122,7 +123,9 @@ export class ProdFormComponent implements OnInit {
       inStock: new FormControl(inStock, Validators.required),
       guarantee: new FormControl(guarantee, Validators.required),
       description: new FormControl(description, Validators.required),
-      productId: new FormControl(productId)
+      productId: new FormControl(productId),
+      specKeys: new FormArray([]),
+      specValues: new FormArray([])
     });
   }
 
@@ -163,17 +166,35 @@ export class ProdFormComponent implements OnInit {
       data.inStock,
       data.guarantee,
       price, manufacturer);
-    console.log(manufacturer);
+    const specs = [];
+    const len = (<FormArray>this.createProductForm.get('specKeys')).length;
+    for (let i = 0; i < len; i++) {
+      const ke = (<FormArray>this.createProductForm.get('specKeys')).at(i);
+      const va = (<FormArray>this.createProductForm.get('specValues')).at(i);
+      specs.push(new Spec(ke.value, va.value));
+    }
     return new Product(
       data.name,
       data.sku,
       data.category,
       details,
       data.tags.split(','),
-      null, null, null, null, null, null, null, data.productId);
+      null, null, specs, null, null, null, null, data.productId);
   }
 
   resetForm() {
     this.createProductForm.reset();
+  }
+
+  addSpecsOfProduct() {
+    const control1 = new FormControl(null, Validators.required);
+    const control2 = new FormControl(null, Validators.required);
+    (<FormArray>this.createProductForm.get('specKeys')).push(control1);
+    (<FormArray>this.createProductForm.get('specValues')).push(control2);
+  }
+
+  removeSpec(ind) {
+    (<FormArray>this.createProductForm.get('specKeys')).removeAt(ind);
+    (<FormArray>this.createProductForm.get('specValues')).removeAt(ind);
   }
 }

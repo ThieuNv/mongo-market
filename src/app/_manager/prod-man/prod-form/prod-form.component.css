@@ -1,0 +1,14 @@
+.input_invalid {
+  background-color: red;
+  color: white;
+  padding: 8px;
+  border: 1px solid red;
+  border-radius: 10px;
+}
+
+#specs_wrapper {
+  overflow: auto;
+  background-color: #efeded;
+  color: #0089ec;
+  margin: 10px 0 !important;
+}

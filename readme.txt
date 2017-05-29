@@ -476,11 +476,22 @@ editor:
   7. Update and Delete product done with database and client
   8. Fixing frontend page categories and tab in page detail-product
 
-26/5/2017
+29/5/2017
   9. Pull out product data from data and push into categories page done.
+  10. Fixing data push into detail-product page.
+
+30/5/2017
+  11. Improve the lack of data specs of product when create new product
+      https://angular.io/docs/ts/latest/api/forms/index/AbstractControl-class.html
+      https://angular.io/docs/ts/latest/api/forms/index/FormArray-class.html
+      http://www.lazada.vn/apple-iphone-7-32gb-den-nham-hang-nhap-khau-2763425.html?spm=a2o4n.campaign-1646.0.0.vAmQR1&ff=1&sc=IW4G&campaign=deal-cong-nghe-gia-soc&boost=1
+      https://material.io/icons/#ic_delete_forever
+
+
 
 // Not done
-  10. Fixing data push into detail-product page.
+  11. Completed the form about detail product in manager page
+
   11. Create Cart Collection in database.
 
   12. Fixing frontend page cart.
@@ -489,3 +500,18 @@ editor:
   14. CRUD Cart
   15. Update Cart Collection connect with User collection and Product collection
   16. .....
+
+ThieuNv (nguyenthieu20133750)
+- Dự kiến 1: Xem được film nào sẽ liệt kê hết lại.
+  + Thông tin film
+  + Ngày xem (Ngày, thời gian)
+  + Cảm nhận về film
+  + Liệt kê nó vào category
+  + Xem trên trang nào
+
+- Dự kiến 2: Liệt kê các hoạt động trong ngày lại, cộng với 1 video tự quay miêu tả về ngày hôm đó.
+  + Thời gian làm gì, làm gì.
+  + Mỗi ngày sẽ giành 1h để tổng hợp lại các hoạt động trong ngày  + Quay video
+  + Dự kiến sẽ làm bằng tiếng anh để khi miêu tả về các hoạt động sẽ học thêm được tiếng anh nói.
+
+- Dự kiến 3: Kết bạn trên zalo, lấy được list ảnh của người đó về.
