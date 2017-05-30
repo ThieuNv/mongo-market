@@ -1,0 +1,11 @@
+<h1>My First Attribute Directive</h1>
+
+<h4>Pick a highlight color</h4>
+<div>
+  <button type="button" class="light-green" (click)="color='lightgreen'">Light Green</button>
+  <button type="button" class="yellow" (click)="color='yellow'">Yellow</button>
+  <button type="button" class="cyan" (click)="color='cyan'">Cyan</button>
+</div>
+<p [appBasicHighlight]="color">Highlight me!</p>
+
+<p appBetterHighlight>Highlight me!</p>

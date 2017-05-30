@@ -7,6 +7,7 @@ import {SigninComponent} from './_auth/signin/signin.component';
 import {SignupComponent} from './_auth/signup/signup.component';
 import {ManagerComponent} from './_manager/manager.component';
 import {WebComponent} from './_web/web.component';
+import {TestDirectiveComponent} from './_test/test-directive/test-directive.component';
 
 
 // Define the routes
@@ -28,6 +29,9 @@ const APP_ROUTES: Routes = [
   },
   {
     path: 'manager', component: ManagerComponent, loadChildren: './_manager/manager.module#ManagerModule'
+  },
+  {
+    path: 'test', component: TestDirectiveComponent,
   }
 ];
 

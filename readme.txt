@@ -509,9 +509,217 @@ ThieuNv (nguyenthieu20133750)
   + Liệt kê nó vào category
   + Xem trên trang nào
 
+http://www.wikihow.vn/Vi%E1%BA%BFt-M%E1%BB%99t-B%C3%A0i-Ph%C3%AA-B%C3%ACnh-Phim (Cách bình luận film)
+
+1. Địch nhân kiệt thông thiên đế quốc
++ Thông tin :
+	Đạo diễn: Hark Tsui
+	Diễn viên: Andy Lau (Lưu Đức Hòa), Bingbing Li (Lý Băng Băng), Carina Lau (Lưu Gia Linh), ...
+	Thể loại: Phiêu Lưu
+	Quốc gia: Trung Quốc
+	Nhà sản xuất: H. Brothers
+	Năm sản xuất: 2010
++ 8h30 -> 10h50 a.m 30/5/2017
++ Category: Film phá án, hành động, gay cấn, hồi hộp.
++ http://phimnhanh.com/xem-phim/dich-nhan-kiet-chi-thong-thien-de-quoc-detective-dee-and-the-mystery-of-the-phantom-flame-2010-2010
++ Cảm nhận :
+	_Bộ film khá hay, nhiều tình tiết hấp dãn và hồi hộp.
+	_Mang đến nhiều cảm xúc lúc tình cảm, lúc hài hước, lúc buồn.
+	_Về mặt hành động, đánh nhau, kĩ xảo tốt.
+	_Lúc đầu xem thì không đoán được cốt truyện, về sau gần cuối mới đoán được là
+		Tịnh Nhi là Quốc Sư và Uông Lý là kẻ cầm đầu chủ mưu.
++ Chấm điểm:
+	_kịch bản: 8
+	_Biên tập (công tác đạo diễn): 8.2
+	_kỹ thuật quay phim: 8.5
+	_hiệu quả hình ảnh(hóa trang): 8.2
+	_Diễn xuất: 8.7
+	_bối cảnh: 7.7
+	_Âm thanh: 8.5
+
+
+
 - Dự kiến 2: Liệt kê các hoạt động trong ngày lại, cộng với 1 video tự quay miêu tả về ngày hôm đó.
   + Thời gian làm gì, làm gì.
   + Mỗi ngày sẽ giành 1h để tổng hợp lại các hoạt động trong ngày  + Quay video
   + Dự kiến sẽ làm bằng tiếng anh để khi miêu tả về các hoạt động sẽ học thêm được tiếng anh nói.
 
 - Dự kiến 3: Kết bạn trên zalo, lấy được list ảnh của người đó về.
+
+
+
+
+==== New today : 30/5/2017
+
+- Ta có thể tìm các hiệu ứng của các template bootstrap sau: https://bootstrapmade.com/,
+  Ví dụ như hiển thị 1 dòng, sau đó hover qua product sẽ show ra chi tiết
+
+- http://emails.castellab.com/idea/
+Trang này ta có thể thêm chức năng : Remove, Duplicate, Change Background, Change Color
+Rất nhiều tính năng hay có thể học từ nó.
+
+- trang này chức toàn theme mất tiền nhưng có thể xem các chức năng của nó.   http://bootstrapbay.com/
+
+- Mình có thể dùng theme bootstrap này cho admin : https://jumpstartthemes.com/demo/v/3.0.0/templates/admin-2/dashboard-3.html
+
+
+- tài nguyên về bootstrap : https://expo.getbootstrap.com/resources/
+
+- 2 Template mà mình download trộm được:
+  options-admin_v12.rar     (http://preview.themeforest.net/item/options-admin-responsive-web-application-ui-kit/full_screen_preview/19796742?_ga=2.138678906.877920770.1496154958-380759513.1496152485)
+   neon                          (http://themes.laborator.co/#theme=neon)
+
+https://getmdl.io/templates/
+
+
+================================ Learning Directive=========================
+https://angular.io/docs/ts/latest/guide/attribute-directives.html
+
+1. Overview
+There are three kinds of directives in Angular:
+
+  Components—directives with a template.
+  Structural directives—change the DOM layout by adding and removing DOM elements.
+  Attribute directives—change the appearance or behavior of an element, component, or another directive.
+
+Components are the most common of the three directives. You saw a component for the first time in the QuickStart guide.
+Structural Directives change the structure of the view. Two examples are NgFor and NgIf. Learn about them in the Structural Directives guide.
+Attribute directives are used as attributes of elements. The built-in NgStyle directive in the Template Syntax guide, for example, can change several element styles at the same time.
+
+2. Viết 1 directive đơn giản
+- Ta cần đánh dấu nó bằng @Directive. Class bên trong sẽ quyết định các hành động của DOM
+- Ví dụ khi hover qua thẻ p thì nó sẽ được hightlight. Ta áp dụng như sau:
+  <p myHighlight>Highlight me!</p>
+
+3. Viết code
+
+hightlight.directive.ts
+
+  import { Directive, ElementRef, Input } from '@angular/core';
+
+  @Directive({
+    selector: '[appHighlight]'
+  })
+  export class HighlightDirective {
+
+    constructor(el: ElementRef) {
+       el.nativeElement.style.backgroundColor = 'yellow';
+    }
+  }
+
+The import statement specifies symbols from the Angular core:
+
+1. Directive provides the functionality of the @Directive decorator.
+2. ElementRef injects into the directive's constructor so the code can access the DOM element.
+3. Input allows data to flow from the binding expression into the directive.
+
+Next, the @Directive decorator function contains the directive metadata in a configuration object as an argument.
+1. After the @Directive metadata comes the directive's controller class, called HighlightDirective, which contains the logic for the directive. Exporting HighlightDirective makes it accessible to other components
+2. Angular creates a new instance of the directive's controller class for each matching element, injecting an Angular ElementRef into the constructor. ElementRef is a service that grants direct access to the DOM element through its nativeElement property.
+
+
+4. Thêm vào component host
+- Ta thêm vào thẻ p (host): <p myHighlight>Highlight me!</p>
+- Cần import HighlightDirective vào trong app.module.ts
+
+
+5. Phản ứng lại hành động của người dùng.
+- Giờ ta có thể khiến directive động hơn bằng cách đáp trả lại khi người dùng di chuột qua host, click vào host. ..
+- Ta cần import : HostListener
+
+  import { Directive, ElementRef, HostListener, Input } from '@angular/core';
+
+- Sau đó ta thêm 2 sự kiện di chuột vào và chuột đỉ ra, cả 2 đều trang trí bằng HostListener
+
+  @HostListener('mouseenter') onMouseEnter() {
+    this.highlight('yellow');
+  }
+
+  @HostListener('mouseleave') onMouseLeave() {
+    this.highlight(null);
+  }
+
+  private highlight(color: string) {
+    this.el.nativeElement.style.backgroundColor = color;
+  }
+
+- The @HostListener decorator lets you subscribe to events of the DOM element that hosts an attribute directive, the <p> in this case.
+
+- Of course you could reach into the DOM with standard JavaScript and and attach event listeners manually. There are at least three problems with that approach:
+  1. You have to write the listeners correctly.
+  2. The code must detach the listener when the directive is destroyed to avoid memory leaks.
+  3. Talking to DOM API directly isn't a best practice.
+
+- Tiếp ta cần tiêm service ElementRef vào Directive đẻ có thể truy cập trực tiếp vào DOM :
+  constructor(private el: ElementRef) { }
+
+
+6. Truyền dynamic color vào Directive bằng Input (Amazing ở chỗ này này)
+  @Input() highlightColor: string;    // Nói rằng thuộc tính này được lấy từ bên ngoài vào
+
+7. Binding vào @Input
+- Vì có input nên mới có binding từ biểu thức bên ngoài vào trong directive được.
+
+  <p myHighlight highlightColor="yellow">Highlighted in yellow</p>
+  <p myHighlight [highlightColor]="'orange'">Highlighted in orange</p>
+
+
+  export class AppComponent {
+    color = 'yellow';
+  }
+
+- Giờ ta dùng đến highlightColor : <p appHighlight [highlightColor]="color">Highlighted with parent component's color</p>
+
+- Ta có thể làm như sau: <p [appHighlight]="color">Highlight me!</p>
+
+- Đó là cú pháp phức tạp, vừa sử dụng highlight directive cho thẻ p, vừa set hightlight color bằng property binding. Quá phức tạp.
+- và ta còn phải đổi tên cho input nữa:
+  @Input() myHighlight: string;
+
+==> Đây là lý do nghĩ ra alias
+
+8. Bind to an @Input alias
+- May mắn rằng ta có thể đặt tên directive property thế nào cũng được, và alias nó với mục đích binding luôn.
+
+  @Input('appHighlight') highlightColor: string;
+
+Inside the directive the property is known as highlightColor. Outside the directive, where you bind to it, it's known as myHighlight.
+You get the best of both worlds: the property name you want and the binding syntax you want:
+
+  <p [myHighlight]="color">Highlight me!</p>
+
+- Giờ khi ta đã binding highlightColor, thay đổi onMouseEnter().
+    @HostListener('mouseenter') onMouseEnter() {
+      this.highlight(this.highlightColor || 'red');
+    }
+
+- Viet lai:
+  <h1>My First Attribute Directive</h1>
+
+  <h4>Pick a highlight color</h4>
+  <div>
+    <button type="button" class="light-green" (click)="color='lightgreen'">Light Green</button>
+    <button type="button" class="yellow" (click)="color='yellow'">Yellow</button>
+    <button type="button" class="cyan" (click)="color='cyan'">Cyan</button>
+  </div>
+  <p [appHighlight]="color">Highlight me!</p>
+
+
+9. Bind to a second property
+- trong thực tế ta sẽ cần nhiều hơn 1 thuộc tính trong directive.
+- Vd như trong trường hợp này ta sẽ có thểm thuộc tính mặc định màu ban đầu (Hiện tại là màu đỏ)
+
+  @Input() defaultColor: string;
+
+  @HostListener('mouseenter') onMouseEnter() {
+    this.highlight(this.highlightColor || this.defaultColor || 'red');
+  }
+
+  <p [myHighlight]="color" defaultColor="violet">
+    Highlight me too!
+  </p>
+
+
+
+
+

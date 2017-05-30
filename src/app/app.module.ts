@@ -42,6 +42,14 @@ import {MessagesService} from './messages/messages.service';
 
 
 import { DropdownDirective } from './_directives/dropdown.directive';
+import { HighlightDirective } from './_directives/highlight.directive';
+import { TestDirectiveComponent } from './_test/test-directive/test-directive.component';
+import { ShowmoreDirective } from './_directives/showmore.directive';
+import { ChangeBackgroundDirective } from './_directives/change-background.directive';
+import { ChangeColorDirective } from './_directives/change-color.directive';
+import { BasicHighlightDirective } from './_directives/basic-highlight.directive';
+import { BetterHighlightDirective } from './_directives/better-highlight.directive';
+import {ChangeUxService} from './_services/change-ux.service';
 
 
 
@@ -78,6 +86,27 @@ import { DropdownDirective } from './_directives/dropdown.directive';
     DropdownDirective,
 
 
+    HighlightDirective,
+
+
+    TestDirectiveComponent,
+
+
+    ShowmoreDirective,
+
+
+    ChangeBackgroundDirective,
+
+
+    ChangeColorDirective,
+
+
+    BasicHighlightDirective,
+
+
+    BetterHighlightDirective,
+
+
 
   ],
   imports: [
@@ -89,7 +118,7 @@ import { DropdownDirective } from './_directives/dropdown.directive';
     routing,
     WebModule
   ],
-  providers: [ MessagesService, AuthService, UserService , ProductService],
+  providers: [ MessagesService, AuthService, UserService , ProductService, ChangeUxService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
