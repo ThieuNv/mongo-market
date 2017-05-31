@@ -487,6 +487,8 @@ editor:
       http://www.lazada.vn/apple-iphone-7-32gb-den-nham-hang-nhap-khau-2763425.html?spm=a2o4n.campaign-1646.0.0.vAmQR1&ff=1&sc=IW4G&campaign=deal-cong-nghe-gia-soc&boost=1
       https://material.io/icons/#ic_delete_forever
 
+	12. Add more directives to frontend and add changing background-color for nav and footer in frontend
+	
 
 
 // Not done
@@ -543,6 +545,33 @@ http://www.wikihow.vn/Vi%E1%BA%BFt-M%E1%BB%99t-B%C3%A0i-Ph%C3%AA-B%C3%ACnh-Phim 
   + Thời gian làm gì, làm gì.
   + Mỗi ngày sẽ giành 1h để tổng hợp lại các hoạt động trong ngày  + Quay video
   + Dự kiến sẽ làm bằng tiếng anh để khi miêu tả về các hoạt động sẽ học thêm được tiếng anh nói.
+  
+30/5/2017 
+	8h dây 
+	8h30 - 11h: Xem film Địch nhân kiệt thông thiên đế quốc 
+	11h-12h : Facebook 
+	12h-1h: Ăn cơm 
+	1h - 4h30: Xem 4 tập film: Tranh đấu vương quyền (Tập 3-6) 
+	4h40-5h30: Tập gym tại nhà 
+	6h-7h30: Mua ổi, mận, cơm. Ăn cơm 
+	7h30-8h30: Rửa bát, Đi tắm.
+	9h-12h30: Viết tiếp code website: mongo_market_mean 
+	12h30-1h: Tổng hợp hết ngày.
+	
+	+ Làm việc hàng ngày (Đánh răng, mua cơm, mua hoa quả, giặt quần áo, ăn cơm, đi tắm ...) : 3h
+	+ Chơi, xem film, facebook: 9h
+	+ Làm việc học: 4h 
+	+ Ngủ: 6h 
+	+ Unknow: 2h 
+	
+	=> Kiến thức mới: Directives angular 2.
+	=> Hiệu quả làm việc: 4/(3*0.15 + 9*0.6 + 6*0.15 + 2*0.2) = 56%  
+	
+	
+31/5/2017 	
+	  
+  
+  
 
 - Dự kiến 3: Kết bạn trên zalo, lấy được list ảnh của người đó về.
 

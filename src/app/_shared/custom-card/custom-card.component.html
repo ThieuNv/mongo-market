@@ -4,7 +4,7 @@
     New
   </div>
 
-  <a class="a_wrapper_img" [routerLink]="['../detail-product', product.productId]">
+  <a class="a_wrapper_img" href="https://bootstrapmade.com/maxim-free-onepage-bootstrap-theme/">
     <div class="img_wrapper">
       <img src="assets/img/product/p1.jpg" alt="iRobot Roomba 780">
     </div>
@@ -15,7 +15,7 @@
     <div class="theme-header">
       <h3>
         <a href="https://bootstrapmade.com/maxim-free-onepage-bootstrap-theme/" rel="bookmark">
-          {{product?.name}}
+          Samsung Galaxy S4
         </a>
       </h3>
     </div>
@@ -23,7 +23,7 @@
     <div class="theme-body">
       <div class="price_actual_wrapper">
         <div class="price">
-          {{product.details.price?.actual | currency:'USD':true:'1.2-2'}}
+          $33.04
         </div>
         <div class="ratings">
           <i class="material-icons yellow-text">star_rate</i>
@@ -34,7 +34,7 @@
       </div>
       <div class="price_sale_wrapper">
         <div class="sale_price">
-          - {{product.details.price?.sale | currency:'USD':true:'1.2-2'}}
+          -$33.04
         </div>
         <div class="sale_text">
           end at:
@@ -46,7 +46,7 @@
     </div>
 
     <div class="theme-footer">
-      <div class="footer_text">{{product.details?.slogan}} </div>
+      <div class="footer_text">This theme will suitable for freelancer, agency, creative people to showcase their profile or works. </div>
       <div class="footer_action">
         <a href="#" class="btn_preview">Preview</a>
         <a href="#" class="btn_buy_now">Buy Now</a>

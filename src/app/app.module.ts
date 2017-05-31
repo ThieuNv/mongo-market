@@ -12,6 +12,7 @@ import { MessagesComponent } from './messages/messages.component';
 
 import { FooterComponent } from './_shared/footer/footer.component';
 import { BreadcrumbComponent } from './_shared/breadcrumb/breadcrumb.component';
+import { CustomCardComponent } from './_shared/custom-card/custom-card.component';
 
 
 import { SigninComponent } from './_auth/signin/signin.component';
@@ -65,6 +66,7 @@ import {ChangeUxService} from './_services/change-ux.service';
 
     FooterComponent,
     BreadcrumbComponent,
+    CustomCardComponent,
 
 
     WebComponent,
@@ -104,7 +106,7 @@ import {ChangeUxService} from './_services/change-ux.service';
     BasicHighlightDirective,
 
 
-    BetterHighlightDirective,
+    BetterHighlightDirective
 
 
 
