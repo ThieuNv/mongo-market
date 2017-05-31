@@ -100,7 +100,6 @@ img {
   background-color: red;
   font-weight: bold;
   margin: 6px 10px;
-  z-index: 1000;
 }
 
 .price_sale_wrapper .sale_price{
