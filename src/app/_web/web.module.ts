@@ -21,6 +21,9 @@ import {ProductReviewsComponent} from './product/product-details/product-reviews
 import {BoxReviewComponent} from './product/product-details/product-reviews/box-review/box-review.component';
 import {BoxRelativeComponent} from './product/product-relatives/box-relative/box-relative.component';
 import {CartComponent} from './cart/cart.component';
+import { ProductGeneralComponent } from './product/product-details/product-general/product-general.component';
+import { ProductSpecificantsComponent } from './product/product-details/product-specificants/product-specificants.component';
+import { BoxFormComponent } from './product/product-details/product-reviews/box-form/box-form.component';
 
 
 
@@ -43,6 +46,9 @@ import {CartComponent} from './cart/cart.component';
     BoxReviewComponent,
     BoxRelativeComponent,
     CartComponent,
+    ProductGeneralComponent,
+    ProductSpecificantsComponent,
+    BoxFormComponent,
   ],
   imports: [
     CommonModule, FormsModule, ReactiveFormsModule, HttpModule, RouterModule,

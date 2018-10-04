@@ -1,0 +1,52 @@
+.card_content {
+  overflow: auto;
+}
+.card-action {
+  padding: 0 !important;
+}
+.card_action {
+  overflow: auto;
+  padding: 16px 24px 8px 24px;
+  background-color: lavender;
+}
+
+.card_action_btn {
+  display: inline-flex;
+  line-height: 24px;
+  cursor: pointer;
+}
+.card_action_btn > span {
+  padding-left: 6px;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+
+
+/* Review Filter */
+.review_filter_star_wrapper, .review_filter_sort_wrapper {
+  display: inline-flex;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.review_filter_star_wrapper i, .review_filter_sort_wrapper i{
+  font-size: 20px;
+  width: 20px;
+  height: 20px;
+}
+.review_filter_star_wrapper span, .review_filter_sort_wrapper span{
+  padding-left: 24px;
+  padding-right: 10px;
+}
+
+.filter_dropdown_a {
+  padding: 3px 10px;
+  color: #fb1313;
+  background-color: rgba(204, 204, 204, 0.43);
+  font-size: 13px;
+  border-radius: 5px;
+  cursor: pointer;
+}

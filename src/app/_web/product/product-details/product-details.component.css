@@ -1,10 +1,15 @@
+#tabs_wrapper, #tabs_content_wrapper {
+  overflow: auto;
+}
+
 ul > li {
   list-style-type: disc;
-}
-.my_ul > li {
-  border: 1px solid green;
 }
 
 .product_detail_wrapper {
   border: 1px solid gray;
+}
+
+#tabs_content_wrapper {
+  border: 2px solid rgba(128, 128, 128, 0.7);
 }

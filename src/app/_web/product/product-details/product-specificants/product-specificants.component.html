@@ -1,0 +1,20 @@
+<div>
+  <table class="bordered striped highlight responsive-table">
+    <thead>
+    <tr>
+      <th>STT</th>
+      <th>Key</th>
+      <th>Value</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr *ngFor="let spec of specs; let ind = index">
+      <td>{{ind + 1}}</td>
+      <td>{{spec.key}}</td>
+      <td>{{spec.value}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+

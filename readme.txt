@@ -569,7 +569,25 @@ http://www.wikihow.vn/Vi%E1%BA%BFt-M%E1%BB%99t-B%C3%A0i-Ph%C3%AA-B%C3%ACnh-Phim 
 	
 	
 31/5/2017 	
-	  
+	5h30 dây 
+	7h - 9h: Thi 
+	9h-12h : Facebook 
+	12h-1h: Ăn cơm 
+	1h30 - 3h30: Xem 2 tập film: Tranh đấu vương quyền (Tập 7,8) 
+	3h30-5h: code web 
+	5h-6h15: Ngủ  
+	6h30-7h15: Tập gym tại nhà 
+	7h30-8h: Ăn cơm 
+	8h30-12h30: Viết tiếp code website: mongo_market_mean 
+	
+	+ Làm việc hàng ngày (Đánh răng, mua cơm, mua hoa quả, giặt quần áo, ăn cơm, đi tắm ...) : 3h
+	+ Chơi, xem film, facebook: 5h
+	+ Làm việc học: 7h30 
+	+ Ngủ: 5h30
+	+ Unknow: 3h 
+	
+	=> Kiến thức mới: No
+	=> Hiệu quả làm việc:    
   
   
 

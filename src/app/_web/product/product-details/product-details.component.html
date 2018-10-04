@@ -1,27 +1,22 @@
-<div class="col s12 no-padding">
-  <ul class="tabs left my_ul"  materialize="tabs">
-    <li class="tab col s3"><a href="#test1">Detail</a></li>
-    <li class="tab col s3"><a href="#test2">Size Guide</a></li>
-    <li class="tab col s3"><a class="active" href="#test3">Reviews</a></li>
-  </ul>
-</div>
-<div class="col s12 product_detail_wrapper">
-  <div id="test1" class="col s12">
-    <p>The RDX Sauna Suit is designed with the goals of reducing your body weight by eliminating cellulite, getting rid of unattractive stomach size, and improving muscle shape and definition. RDX Sauna Suit provides effective sweat aid which uses natural body heat generated from low or high intensive physical exercise, to increase perspiration.</p>
-    <ul>
-      <li>Exclusive and stylish design, Nylon construction with Impact-X Technology </li>
-      <li>Safe for machine-wash, 2-piece Unisex Weight loss Sauna Suit </li>
-      <li>Dual-stitched seam  ,Improve workout efficiency by 70%</li>
-      <li>Soft, comfortable and non-toxic built material</li>
-      <li>Meant to improve weight-loss</li>
+<div class="col s12">
+  <div id="tabs_wrapper">
+    <ul class="tabs left my_ul_tabs"  materialize="tabs">
+      <li class="tab col s3 red darken-1"><a class="white-text" href="#test1">Genenal</a></li>
+      <li class="tab col s3 purple darken-4"><a class="white-text" href="#test2">Specificant</a></li>
+      <li class="tab col s3  blue accent-2"><a class="active white-text" href="#test3">Reviews</a></li>
     </ul>
   </div>
-  <div id="test2" class="col s12">
-    <div>
-      <img src="assets/img/product-detail/size-guide.jpg" alt="Size guide">
+</div>
+<div class="col s12">
+  <div id="tabs_content_wrapper">
+    <div id="test1" class="col s12">
+      <app-product-general [description]="product?.details.description" ></app-product-general>
     </div>
-  </div>
-  <div id="test3" class="col s12">
-    <app-product-reviews></app-product-reviews>
+    <div id="test2" class="col s12">
+      <app-product-specificants [specs]="product?.specs"></app-product-specificants>
+    </div>
+    <div id="test3" class="col s12">
+      <app-product-reviews [reviews]="product?.reviews"></app-product-reviews>
+    </div>
   </div>
 </div>

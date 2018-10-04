@@ -48,7 +48,7 @@
     <div class="theme-footer">
       <div class="footer_text">{{product.details?.slogan}} </div>
       <div class="footer_action">
-        <a href="#" class="btn_preview">Preview</a>
+        <a [routerLink]="['../detail-product', product.productId]" class="btn_preview">Preview</a>
         <a href="#" class="btn_buy_now">Buy Now</a>
         <a href="#" class="btn_add_to_cart">Add To Card</a>
       </div>

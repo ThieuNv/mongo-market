@@ -1,2 +1,89 @@
 <h4>Reviews & Rating</h4>
-<app-box-review *ngFor="let i of listReview"></app-box-review>
+
+<app-box-form></app-box-form>
+
+<div class="col s12">
+  <div class="card">
+
+    <div class="card-action">
+      <div class="card_action">
+
+        <div class="col s4">
+          <strong>Nhận xét về sản phẩm
+          </strong>
+        </div>
+
+        <div class="col s8">
+          <div class="review_filter_wrapper">
+
+            <form>
+              <div class="row">
+
+                <div class="input-field col s6 review_filter_star_wrapper">
+                  <i class="material-icons prefix">filter_list</i>
+                  <span>Lọc bởi:</span>
+
+                  <!-- Dropdown Trigger -->
+                  <a materialize="dropdown" class='dropdown-button filter_dropdown_a' data-activates='filterStar'> Tất cả sao </a>
+                  <!-- Dropdown Structure -->
+                  <ul id='filterStar' class='dropdown-content'>
+                    <li><a>Tất cả sao</a></li>
+                    <li class="divider"></li>
+                    <li><a>5 sao</a></li>
+                    <li><a>4 sao</a></li>
+                    <li><a>3 sao</a></li>
+                    <li><a>2 sao</a></li>
+                    <li><a>1 sao</a></li>
+                  </ul>
+
+                </div>
+
+
+                <div class="input-field col s6 review_filter_sort_wrapper">
+                  <i class="material-icons prefix">swap_vert</i>
+                  <span>Sắp xếp theo: </span>
+
+                  <!-- Dropdown Trigger -->
+                  <a materialize="dropdown" class='dropdown-button filter_dropdown_a' data-activates='filterSort'> Liên quan </a>
+                  <!-- Dropdown Structure -->
+                  <ul id='filterSort' class='dropdown-content'>
+                    <li><a>Gần đây</a></li>
+                    <li><a>Liên quan</a></li>
+                    <li class="divider"></li>
+                    <li><a>Đánh giá: Từ cao tới thấp</a></li>
+                    <li><a>Đánh giá: từ thấp đến cao</a></li>
+
+                  </ul>
+
+                </div>
+
+              </div>
+            </form>
+
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="card-content">
+      <div class="card_content">
+        <div class="col s12">
+          <div class="review_content_wrapper">
+
+            <app-box-review
+              *ngFor="let review of reviews"
+              [review]="review">
+            </app-box-review>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+

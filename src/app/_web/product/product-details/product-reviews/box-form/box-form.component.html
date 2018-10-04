@@ -1,0 +1,195 @@
+<div class="col s12">
+  <div class="card">
+
+    <div class="card-action">
+      <div class="card_action">
+
+        <div class="col s9">
+          <strong>Đánh giá & nhận xét cho sản phẩm Kệ Sách Lắp Ghép 7 Buồng
+          </strong>
+        </div>
+
+        <div class="col s3">
+          <button type="button" class="btn white-text orange" (click)="onOpenForm()">Đánh giá & Nhận xét</button>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="card-content">
+      <div class="card_content">
+        <div class="col s12">
+          <div class="ratings_result_wrapper">
+            <p class="ratings_subhead">
+              Điểm đánh giá trung bình của sản phẩm
+            </p>
+
+            <div class="ratings_bar_total">
+              <div class="ratings_star_wrapper col s3">
+                <div class="ratings_star">
+                  <i class="material-icons">stars</i>
+                  <i class="material-icons">stars</i>
+                  <i class="material-icons">stars</i>
+                  <i class="material-icons">stars</i>
+                  <i class="material-icons">stars</i>
+                </div>
+
+                <div class="ratings_number">
+                  <em>4</em> trên 5
+                </div>
+
+                <div class="ratings_text">
+                  2 đánh giá 2 nhận xét
+                </div>
+
+              </div>
+
+              <ul class="ratings_bar_list col s6">
+                <li class="ratings_bar_list_item">
+                  <span class="ratings_bar_label ">5 sao</span>
+                  <span class="ratings_bar_line_cell">
+                    <span class="ratingBarLine">
+                    <span style="width: 0%;" class="ratingBarLevel"></span>
+                    </span>
+                </span>
+                  <span class="ratings_bar_count">0</span>
+                </li>
+                <li class="ratings_bar_list_item">
+                  <span class="ratings_bar_label ">4 sao</span>
+                  <span class="ratings_bar_line_cell color_markable_yellow">
+                    <span class="ratingBarLine">
+                    <span style="width: 100%;" class="ratingBarLevel"></span>
+                    </span>
+                </span>
+                  <span class="ratings_bar_count">2</span>
+                </li>
+                <li class="ratings_bar_list_item">
+                  <span class="ratings_bar_label ">3 sao</span>
+                  <span class="ratings_bar_line_cell">
+                    <span class="ratingBarLine">
+                    <span style="width: 0%;" class="ratingBarLevel"></span>
+                    </span>
+                </span>
+                  <span class="ratings_bar_count">0 </span>
+                </li>
+                <li class="ratings_bar_list_item">
+                  <span class="ratings_bar_label ">2 sao </span>
+                  <span class="ratings_bar_line_cell">
+                    <span class="ratingBarLine">
+                    <span style="width: 0%;" class="ratingBarLevel"></span>
+                    </span>
+                </span>
+                  <span class="ratings_bar_count">0 </span>
+                </li>
+                <li class="ratings_bar_list_item">
+                  <span class="ratings_bar_label ">1 sao </span>
+                  <span class="ratings_bar_line_cell">
+                    <span class="ratingBarLine">
+                    <span style="width: 0%;" class="ratingBarLevel"></span>
+                    </span>
+                </span>
+                  <span class="ratings_bar_count">0</span>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col s12" *ngIf="isShowForm">
+          <div id="product_rating">
+
+            <form id="product_rating_form" method="post">
+
+              <div class="rating_form_content col s8">
+                <p class="rating_form_title">
+                  Xin vui lòng chia sẻ đánh giá của bạn về sản phẩm này
+                </p>
+
+
+                <div class="rating_star">
+                  <label class="rating_star_title">Nhận xét về sản phẩm này</label>
+
+                  <div class="rating_star_wrapper">
+                    <input class="ratingStarsInput" id="ratingStarsItem-5" type="radio" name="rating-option--1" value="5">
+                    <label class="ratingStarsStar" for="ratingStarsItem-5" data-title="5 sao"></label>
+
+                    <input class="ratingStarsInput" id="ratingStarsItem-4" type="radio" name="rating-option--1" value="4">
+                    <label class="ratingStarsStar" for="ratingStarsItem-4" data-title="4 sao"></label>
+
+                    <input class="ratingStarsInput" id="ratingStarsItem-3" type="radio" name="rating-option--1" value="3">
+                    <label class="ratingStarsStar" for="ratingStarsItem-3" data-title="3 sao"></label>
+
+                    <input class="ratingStarsInput" id="ratingStarsItem-2" type="radio" name="rating-option--1" value="2">
+                    <label class="ratingStarsStar" for="ratingStarsItem-2" data-title="2 sao"></label>
+
+                    <input class="ratingStarsInput" id="ratingStarsItem-1" type="radio" name="rating-option--1" value="1">
+                    <label class="ratingStarsStar" for="ratingStarsItem-1" data-title="1 sao"></label>
+                    <span class="ratingStarsHint">Nhấn vào đây để đánh giá</span>
+                  </div>
+                </div>
+
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">account_circle</i>
+                  <input  type="text" id="icon_prefix" class="validate">
+                  <label for="icon_prefix">Tiêu đề đánh giá (tùy chọn)</label>
+                </div>
+
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">mode_edit</i>
+                  <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+                  <label for="icon_prefix2">Mô tả đánh giá</label>
+                </div>
+
+                <div class="rating_form_author col s12 right-align">
+                  Nhận xét của <strong>Nguyen Hung.</strong>
+                </div><!-- #ProductRatingFormSender -->
+
+                <div class="rating_btn_submit col s12 right-align">
+                  <button type="submit" class="btn orange darken-1 white-text">Gửi nhận xét</button>
+                </div>
+
+                <div id="ProductRatingFormAction" class="ratRev_actionBox">
+                  <input type="hidden" name="rating-sku" value="NO007HLAA2V7H1VNAMZ">
+                  <input type="hidden" name="RatingForm[name]" value="nguyen hung 2">
+                  <input type="hidden" name="RatingForm[email]" value="">
+                  <input type="hidden" name="utm_medium" value="">
+
+
+                </div><!-- #ProductRatingFormAction -->
+
+              </div>
+
+              <div class="rating_form_aside col s4">
+                <!--- Start CMS desktop_guide_write_review-->
+                <h3>Để viết 1 đánh giá chất lượng</h3>
+                <h4>Bạn nên:</h4>
+                <ul>
+                  <li>Chỉ đánh giá về sản phẩm và đặc tính của nó.</li>
+                  <li>Viết đánh giá dựa trên kinh nghiệm của bản thân.</li>
+                  <li>Cho Lazada biết "tại sao" bạn lại cảm thấy như vậy về sản phẩm.</li>
+                </ul>
+                <br>
+                <h4>Bạn không nên:</h4>
+                <ul>
+                  <li>Chia sẻ những thông tin không liên quan đến sản phẩm.</li>
+                  <li>Chia sẻ thông tin không xác thực, dễ gây hiểu lầm và mang tính chất lừa đảo.</li>
+                  <li>Chửi thề, đe dọa, hay sử dụng những từ ngữ không có văn hóa, phân biệt chủng tộc.</li>
+                  <li>Chia sẻ bất kỳ thông tin cá nhân nào.</li>
+                  <li>Đưa ra đường link không phải của Lazada.</li>
+                  <li>Sử dụng trái phép những thông tin liên quan đến bản quyền và thương hiệu.</li>
+                </ul>
+                <!--- End CMS desktop_guide_write_review-->
+              </div>
+
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+</div>
